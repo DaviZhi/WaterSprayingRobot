@@ -23,3 +23,5 @@ For FG signal: use ADC with voltage divider to ensure <3.3V input
 Remove SN74 chip
 
 v1.0.4
+
+Version updates regarding hardware, code, and modeling will be merged and synchronized starting from version v1.0.5
