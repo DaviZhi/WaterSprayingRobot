@@ -1,0 +1,25 @@
+**Revision Log**
+
+v1.0.1
+
+Split into power board and control board, top layer remains copper pour
+
+v1.0.2
+
+TPS5430 buck converter Vsen not exactly 1.221V (may reach 1.6V); ENA needs to be left floating
+
+Crystal oscillator circuit not functioning - use 4-pin oscillator instead, remove copper pour on top layer
+
+BLDC3 top silkscreen label incorrect
+
+SWD interface silkscreen should be on top layer
+
+v1.0.3
+
+RS0104 level shifter mistakenly connected to NC pin - needs correction
+
+For FG signal: use ADC with voltage divider to ensure <3.3V input
+
+Remove SN74 chip
+
+v1.0.4
