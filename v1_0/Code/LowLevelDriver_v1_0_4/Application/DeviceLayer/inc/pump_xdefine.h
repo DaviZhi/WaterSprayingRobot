@@ -1,0 +1,10 @@
+#ifndef PUMP_XDEFINE_H
+#define	PUMP_XDEFINE_H
+
+#define		PUMP_FLOWRATE_MAX		1000
+#define		PUMP_FLOWRATE_MIN		0
+
+#define		PUMP_IN1_SET		GPIO_PIN_SET
+#define		PUMP_IN1_RESET		GPIO_PIN_RESET
+
+#endif
