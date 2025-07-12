@@ -48,6 +48,7 @@
 "lowleveldriver_v1_0_4\bldc_driver.o"
 "lowleveldriver_v1_0_4\pump_driver.o"
 "lowleveldriver_v1_0_4\stpr_driver.o"
+"lowleveldriver_v1_0_4\rmt_driver.o"
 --strict --scatter "LowLevelDriver_v1_0_4\LowLevelDriver_v1_0_4.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
