@@ -51,3 +51,5 @@ lowleveldriver_v1_0_4\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/inc
 lowleveldriver_v1_0_4\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 lowleveldriver_v1_0_4\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 lowleveldriver_v1_0_4\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+lowleveldriver_v1_0_4\freertos.o: ../Application/TaskLayer/inc/test_task.h
+lowleveldriver_v1_0_4\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h

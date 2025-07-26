@@ -42,7 +42,6 @@ typedef struct
 }stpr_set_t;
 
 
-
 void Stepper_DirectSet(stpr_set_t* stpr_set, GPIO_PinState dir_set);
 void Stepper_SleepSet(stpr_set_t* stpr_set, GPIO_PinState slp_set);
 void Stepper_EnableSet(stpr_set_t* stpr_set, GPIO_PinState ebl_set);
@@ -52,5 +51,6 @@ void Stepper_MicrostepSet(stpr_set_t* stpr_set, stpr_microstep_e stpr_mcrstp);
 void Stepper_StepFreqSet(stpr_set_t* stpr_set, uint16_t stpr_stpfrq);
 void Stepper_FaultFlagGet(stpr_flag_t* stpr_flag);
 void Stepper_HomeFlagGet(stpr_flag_t* stpr_flag);
+void Stepper_Start(void);
 
 #endif

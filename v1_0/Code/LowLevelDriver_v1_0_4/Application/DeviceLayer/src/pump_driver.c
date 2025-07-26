@@ -3,12 +3,9 @@
 
 void Pump_Init(pump_set_t* pump_set)
 {
-	/*Allocate memory*/
-	
-	/*End of allocation*/
-	
 	pump_set->flowrate_set = PUMP_FLOWRATE_MAX;
 	pump_set->pump_in1_set = PUMP_IN1_RESET;
+	
 	__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, pump_set->flowrate_set);
 	HAL_GPIO_WritePin(PUMP_IN1_GPIO_Port, PUMP_IN1_Pin, pump_set->pump_in1_set);
 }
@@ -66,4 +63,9 @@ void Pump_ModeSet(pump_set_t* pump_set, pump_modeset_e pump_mdset)
 			break;
 		}
 	}
+}
+
+void Pump_Start(void)
+{
+	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
 }

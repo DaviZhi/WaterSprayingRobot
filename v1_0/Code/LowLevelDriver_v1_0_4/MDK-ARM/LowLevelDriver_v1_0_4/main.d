@@ -58,3 +58,5 @@ lowleveldriver_v1_0_4\main.o: ../Core/Inc/spi.h
 lowleveldriver_v1_0_4\main.o: ../Core/Inc/tim.h
 lowleveldriver_v1_0_4\main.o: ../Core/Inc/usart.h
 lowleveldriver_v1_0_4\main.o: ../Core/Inc/gpio.h
+lowleveldriver_v1_0_4\main.o: ../Application/DeviceLayer/inc/bldc_driver.h
+lowleveldriver_v1_0_4\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

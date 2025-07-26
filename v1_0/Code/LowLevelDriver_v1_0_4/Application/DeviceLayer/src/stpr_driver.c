@@ -46,9 +46,13 @@ void Stepper_MicrostepSet(stpr_set_t* stpr_set, stpr_microstep_e stpr_mcrstp)
 
 void Stepper_StepFreqSet(stpr_set_t* stpr_set, uint16_t stpr_stpfrq)
 {
+	uint32_t tim12_clock;
+	
 	stpr_set->stepfreq_set = stpr_stpfrq;
-	__HAL_TIM_SET_AUTORELOAD(&htim12, (84000000 / (htim12.Init.Prescaler * stpr_set->stepfreq_set)) - 1);
-	__HAL_TIM_SET_COMPARE(&htim12, TIM_CHANNEL_2, (84000000 / (htim12.Init.Prescaler * stpr_set->stepfreq_set)) / 2);
+	tim12_clock = HAL_RCC_GetPCLK1Freq() * 2;
+	
+	__HAL_TIM_SET_AUTORELOAD(&htim12, (tim12_clock / (htim12.Init.Prescaler * stpr_set->stepfreq_set)) - 1);
+	__HAL_TIM_SET_COMPARE(&htim12, TIM_CHANNEL_2, (tim12_clock / (htim12.Init.Prescaler * stpr_set->stepfreq_set)) / 2);
 }
 
 void Stepper_FaultFlagGet(stpr_flag_t* stpr_flag)
@@ -59,4 +63,9 @@ void Stepper_FaultFlagGet(stpr_flag_t* stpr_flag)
 void Stepper_HomeFlagGet(stpr_flag_t* stpr_flag)
 {
 	stpr_flag->home_flag = HAL_GPIO_ReadPin(STEPPER_nHOME_GPIO_Port, STEPPER_nHOME_Pin);
+}
+
+void Stepper_Start(void)
+{
+	HAL_TIM_PWM_Start(&htim12, TIM_CHANNEL_2);
 }

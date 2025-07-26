@@ -35,6 +35,11 @@
 "lowleveldriver_v1_0_4\stm32f4xx_hal_tim_ex.o"
 "lowleveldriver_v1_0_4\stm32f4xx_hal_uart.o"
 "lowleveldriver_v1_0_4\system_stm32f4xx.o"
+"lowleveldriver_v1_0_4\bldc_driver.o"
+"lowleveldriver_v1_0_4\pump_driver.o"
+"lowleveldriver_v1_0_4\stpr_driver.o"
+"lowleveldriver_v1_0_4\rmt_driver.o"
+"lowleveldriver_v1_0_4\test_task.o"
 "lowleveldriver_v1_0_4\croutine.o"
 "lowleveldriver_v1_0_4\event_groups.o"
 "lowleveldriver_v1_0_4\list.o"
@@ -45,10 +50,6 @@
 "lowleveldriver_v1_0_4\cmsis_os.o"
 "lowleveldriver_v1_0_4\heap_4.o"
 "lowleveldriver_v1_0_4\port.o"
-"lowleveldriver_v1_0_4\bldc_driver.o"
-"lowleveldriver_v1_0_4\pump_driver.o"
-"lowleveldriver_v1_0_4\stpr_driver.o"
-"lowleveldriver_v1_0_4\rmt_driver.o"
 --strict --scatter "LowLevelDriver_v1_0_4\LowLevelDriver_v1_0_4.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
