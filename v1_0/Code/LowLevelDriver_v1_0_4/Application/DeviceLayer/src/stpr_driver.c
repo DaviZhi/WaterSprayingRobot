@@ -32,7 +32,7 @@ void Stepper_DecaySet(stpr_set_t* stpr_set, GPIO_PinState dcy_set)
 
 void Stepper_MicrostepSet(stpr_set_t* stpr_set, stpr_microstep_e stpr_mcrstp)
 {
-	uint8_t mode[3] = {0};
+	static uint8_t mode[3] = {0};
 	
 	stpr_set->microstep_set = stpr_mcrstp;
 	mode[0] = ((stpr_set->microstep_set >> 0) & 0x01);
@@ -46,7 +46,7 @@ void Stepper_MicrostepSet(stpr_set_t* stpr_set, stpr_microstep_e stpr_mcrstp)
 
 void Stepper_StepFreqSet(stpr_set_t* stpr_set, uint16_t stpr_stpfrq)
 {
-	uint32_t tim12_clock;
+	static uint32_t tim12_clock;
 	
 	stpr_set->stepfreq_set = stpr_stpfrq;
 	tim12_clock = HAL_RCC_GetPCLK1Freq() * 2;

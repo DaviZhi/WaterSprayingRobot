@@ -17,7 +17,6 @@ lowleveldriver_v1_0_4\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/in
 lowleveldriver_v1_0_4\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 lowleveldriver_v1_0_4\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 lowleveldriver_v1_0_4\test_task.o: ../Application/DeviceLayer/inc/bldc_driver.h
-lowleveldriver_v1_0_4\test_task.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 lowleveldriver_v1_0_4\test_task.o: ../Core/Inc/tim.h
 lowleveldriver_v1_0_4\test_task.o: ../Core/Inc/main.h
 lowleveldriver_v1_0_4\test_task.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h

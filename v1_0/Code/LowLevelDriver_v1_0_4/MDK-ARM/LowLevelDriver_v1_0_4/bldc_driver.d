@@ -1,6 +1,5 @@
 lowleveldriver_v1_0_4\bldc_driver.o: ..\Application\DeviceLayer\src\bldc_driver.c
 lowleveldriver_v1_0_4\bldc_driver.o: ../Application/DeviceLayer/inc/bldc_driver.h
-lowleveldriver_v1_0_4\bldc_driver.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 lowleveldriver_v1_0_4\bldc_driver.o: ../Core/Inc/tim.h
 lowleveldriver_v1_0_4\bldc_driver.o: ../Core/Inc/main.h
 lowleveldriver_v1_0_4\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h

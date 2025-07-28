@@ -96,11 +96,12 @@ void BLDC_RevoSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState rev_s
 	}
 }
 
-uint32_t Val = 0;
+//uint16_t Val = 0;
 
-void BLDC_SpeedGet(void)
+void BLDC_SpeedGet_Start(void)
 {
-	
+	uint16_t conv_val[4];
+	HAL_ADC_Start_DMA(&hadc1, (uint32_t*)conv_val, sizeof(conv_val));
 }
 
 void BLDC_SpeedSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, uint16_t spd_set)

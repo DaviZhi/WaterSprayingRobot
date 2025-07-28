@@ -6,6 +6,6 @@
 #include "cmsis_os.h"
 
 void StartDefaultTask(void const * argument);
-void StopTask(void *argument);
+void Task1(void *argument);
 
 #endif

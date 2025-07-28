@@ -1,7 +1,6 @@
 #ifndef BLDC_DRIVER_H
 #define BLDC_DRIVER_H
 
-#include "stdbool.h"
 #include "tim.h"
 #include "adc.h"
 
@@ -18,6 +17,7 @@ typedef struct
 	GPIO_PinState brake_set;
 	GPIO_PinState revo_set;
 	uint16_t speed_set;
+	uint16_t speed_get;
 	
 }bldc_set_t;
 
