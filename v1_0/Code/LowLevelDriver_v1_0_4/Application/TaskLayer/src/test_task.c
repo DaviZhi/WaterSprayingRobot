@@ -1,18 +1,17 @@
 #include "test_task.h"
 #include "bldc_driver.h"
 
-float Volt[4] = {0};
-uint32_t ConvVal[4] = {0};
+bldc_set_t BLDC_Set[4];
 
 void Task1(void *argument)
 {
-	HAL_ADC_Start_DMA(&hadc1, ConvVal, 4);
+	BLDC_xQueueCreate();
+
 	for(;;)
 	{
-		Volt[0] = (float)ConvVal[0] * 3.3f / 4095;
-		Volt[1] = (float)ConvVal[1] * 3.3f / 4095;
-		Volt[2] = (float)ConvVal[2] * 3.3f / 4095;
-		Volt[3] = (float)ConvVal[3] * 3.3f / 4095;
+		BLDC_SpeedSend();
+		BLDC_SpeedReceive(BLDC_Set);
+		
 		osDelay(1);
 	}
 }

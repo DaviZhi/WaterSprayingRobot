@@ -41,3 +41,13 @@ lowleveldriver_v1_0_4\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4
 lowleveldriver_v1_0_4\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 lowleveldriver_v1_0_4\bldc_driver.o: ../Core/Inc/adc.h
 lowleveldriver_v1_0_4\bldc_driver.o: ../Application/DeviceLayer/inc/bldc_xdefine.h
+lowleveldriver_v1_0_4\bldc_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+lowleveldriver_v1_0_4\bldc_driver.o: ../Core/Inc/FreeRTOSConfig.h
+lowleveldriver_v1_0_4\bldc_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+lowleveldriver_v1_0_4\bldc_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+lowleveldriver_v1_0_4\bldc_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+lowleveldriver_v1_0_4\bldc_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+lowleveldriver_v1_0_4\bldc_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+lowleveldriver_v1_0_4\bldc_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+lowleveldriver_v1_0_4\bldc_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+lowleveldriver_v1_0_4\bldc_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

@@ -1,5 +1,7 @@
 #include "bldc_driver.h"
 #include "bldc_xdefine.h"
+#include "FreeRTOS.h"
+#include "queue.h"
 
 void BLDC_Init(bldc_set_t* bldc_set)
 {
@@ -96,12 +98,34 @@ void BLDC_RevoSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState rev_s
 	}
 }
 
-//uint16_t Val = 0;
 
-void BLDC_SpeedGet_Start(void)
+xQueueHandle xQueueConvData;
+
+void BLDC_xQueueCreate(void)
 {
-	uint16_t conv_val[4];
-	HAL_ADC_Start_DMA(&hadc1, (uint32_t*)conv_val, sizeof(conv_val));
+	xQueueConvData = xQueueCreate(4, sizeof(uint16_t));
+}
+
+void BLDC_SpeedSend(void)
+{
+	static uint16_t conv_data_send[4];
+	
+	HAL_ADC_Start_DMA(&hadc1, (uint32_t*)conv_data_send, sizeof(conv_data_send));
+	
+	xQueueSendToBack(xQueueConvData, conv_data_send, portMAX_DELAY);
+}
+
+void BLDC_SpeedReceive(bldc_set_t* bldc_set)
+{
+	static uint16_t conv_data_rcv[4];
+	
+	if(xQueueReceive(xQueueConvData, conv_data_rcv, portMAX_DELAY) == pdPASS)
+	{
+		bldc_set[LF].speed_get = conv_data_rcv[0];
+		bldc_set[RF].speed_get = conv_data_rcv[1];
+		bldc_set[RB].speed_get = conv_data_rcv[2];
+		bldc_set[LB].speed_get = conv_data_rcv[3];
+	}
 }
 
 void BLDC_SpeedSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, uint16_t spd_set)

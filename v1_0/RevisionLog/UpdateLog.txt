@@ -4,7 +4,7 @@ v1.0.1
 
 Split into power board and control board, top layer remains copper pour
 
-v1.0.2
+2025-5-30: v1.0.2
 
 TPS5430 buck converter Vsen not exactly 1.221V (may reach 1.6V); ENA needs to be left floating
 
@@ -14,7 +14,7 @@ BLDC3 top silkscreen label incorrect
 
 SWD interface silkscreen should be on top layer
 
-v1.0.3
+2025-6-8: v1.0.3
 
 RS0104 level shifter mistakenly connected to NC pin - needs correction
 
@@ -22,6 +22,6 @@ For FG signal: use ADC with voltage divider to ensure <3.3V input
 
 Remove SN74 chip
 
-v1.0.4
+2025-7-7: v1.0.4
 
 Version updates regarding hardware, code, and modeling will be merged and synchronized starting from version v1.0.5

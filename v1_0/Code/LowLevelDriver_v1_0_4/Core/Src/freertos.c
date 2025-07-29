@@ -107,6 +107,7 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+  xTaskCreate(Task1, "TestTask", 128, NULL, 0, NULL);
   /* USER CODE END RTOS_THREADS */
 
 }

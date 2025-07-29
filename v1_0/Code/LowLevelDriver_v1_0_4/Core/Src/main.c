@@ -108,14 +108,7 @@ int main(void)
   MX_UART5_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-//	HAL_GPIO_WritePin(BLDC1_BRA_GPIO_Port, BLDC1_BRA_Pin, GPIO_PIN_SET);
-//	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 500);
-//	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-//	HAL_GPIO_WritePin(BLDC3_REV_GPIO_Port, BLDC3_REV_Pin, GPIO_PIN_SET);
-//	HAL_GPIO_WritePin(BLDC3_BRA_GPIO_Port, BLDC3_BRA_Pin, GPIO_PIN_SET);
-//	__HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_2, 500);
-//	HAL_TIM_PWM_Start(&htim9, TIM_CHANNEL_2);
-//  BLDC_Start(RF);
+
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in cmsis_os2.c) */
