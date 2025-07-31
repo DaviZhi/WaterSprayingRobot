@@ -1,10 +1,17 @@
 #include "test_task.h"
 #include "bldc_driver.h"
+#include "rmt_driver.h"
 
 bldc_set_t BLDC_Set[4];
+rmt_info_t Rmt_Info;
 
-void Task1(void *argument)
+void Task1(void* argument)
 {
+	BLDC_Init(BLDC_Set);
+	BLDC_SpeedSet(BLDC_Set, RF, 400);
+	BLDC_SpeedSet(BLDC_Set, LF, 400);
+	BLDC_Start(RF);
+	BLDC_Start(LF);
 	BLDC_xQueueCreate();
 
 	for(;;)
@@ -18,11 +25,10 @@ void Task1(void *argument)
 
 void StartDefaultTask(void const * argument)
 {
-	bldc_set_t bldc_set;
-	BLDC_SpeedSet(&bldc_set, RF, 500);
 	
 	for(;;)
 	{
+		Remote_ChannelGet(&Rmt_Info);
 		osDelay(1);
 	}
 }

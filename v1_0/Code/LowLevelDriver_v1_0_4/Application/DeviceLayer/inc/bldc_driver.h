@@ -4,14 +4,16 @@
 #include "tim.h"
 #include "adc.h"
 
+/* Private enum---------*/
 typedef enum
 {
-	LF = 2,
-	RF = 0,
-	LB = 1,
-	RB = 3,
+	LF = 2,		//left front bldc
+	RF = 0,		//right front bldc
+	LB = 1,     //left behind bldc
+	RB = 3,     //right behind bldc
 }bldc_num_e;
 
+/* Private struct----------*/
 typedef struct
 {
 	GPIO_PinState brake_set;
@@ -21,23 +23,17 @@ typedef struct
 	
 }bldc_set_t;
 
-//typedef struct
-//{
-//	bldc_set_t bldc_set;
-//	bldc_num_e bldc_num;
-//	
-//}bldc_t;
+/* BLDC_Imported function------------------------------------------------------*/
+static void BLDC_EMO(bldc_set_t* bldc_set);
 
-void BLDC_EMO(bldc_set_t* bldc_set);
+/* BLDC_Exported function------------------------------------------------------*/
 void BLDC_Init(bldc_set_t* bldc_set);
 void BLDC_BrakeSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState bra_set);
 void BLDC_RevoSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState rev_set);
 void BLDC_SpeedSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, uint16_t spd_set);
-
 void BLDC_xQueueCreate(void);
 void BLDC_SpeedSend(void);
 void BLDC_SpeedReceive(bldc_set_t* bldc_set);
-
 void BLDC_Start(bldc_num_e bldc_num);
 void BLDC_Stop(bldc_num_e bldc_num);
 

@@ -3,12 +3,16 @@
 
 #define		BLDC_NUM		4
 
-//bldc speed set limit
+/* bldc speed set limit-------------*/
 #define		BLDC_SPDMAX		1000
 #define		BLDC_SPDMIN		0
 
-//bldc brake set
+/* bldc brake set-----------------------*/
 #define		BLDC_BRAKE		GPIO_PIN_RESET
 #define		BLDC_LOOSE		GPIO_PIN_SET
+
+/* bldc rotation direction set----------*/
+#define		BLDC_CW			GPIO_PIN_RESET
+#define		BLDC_CCW		GPIO_PIN_SET
 
 #endif

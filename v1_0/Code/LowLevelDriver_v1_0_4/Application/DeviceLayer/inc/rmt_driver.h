@@ -4,6 +4,7 @@
 #include "usart.h"
 #include "gpio.h"
 
+/* Private struct----------*/
 typedef struct
 {
 	uint8_t sbus_data[25];
@@ -11,6 +12,7 @@ typedef struct
 	
 }rmt_info_t;
 
+/* Remote_Exported function------------------------------------------------------*/
 void Remote_ChannelGet(rmt_info_t* rmt_info);
 
 #endif

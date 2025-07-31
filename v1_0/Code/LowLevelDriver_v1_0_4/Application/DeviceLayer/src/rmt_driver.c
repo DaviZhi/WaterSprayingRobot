@@ -1,5 +1,9 @@
 #include "rmt_driver.h"
 
+/**	
+ * @brief Receive data from receiver and convert them into channel value, every 11 bit data compose a channel.
+ * @param rmt_info structure ptr.
+ */
 void Remote_ChannelGet(rmt_info_t* rmt_info)
 {
 	HAL_UART_Receive_DMA(&huart2, rmt_info->sbus_data, sizeof(rmt_info->sbus_data));

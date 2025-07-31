@@ -55,3 +55,6 @@ lowleveldriver_v1_0_4\test_task.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx
 lowleveldriver_v1_0_4\test_task.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 lowleveldriver_v1_0_4\test_task.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 lowleveldriver_v1_0_4\test_task.o: ../Core/Inc/adc.h
+lowleveldriver_v1_0_4\test_task.o: ../Application/DeviceLayer/inc/rmt_driver.h
+lowleveldriver_v1_0_4\test_task.o: ../Core/Inc/usart.h
+lowleveldriver_v1_0_4\test_task.o: ../Core/Inc/gpio.h
