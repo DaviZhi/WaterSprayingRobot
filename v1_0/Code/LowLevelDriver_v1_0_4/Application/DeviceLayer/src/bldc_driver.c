@@ -186,11 +186,17 @@ void BLDC_xQueueCreate(void)
 	xQueueConvData = xQueueCreate(4, sizeof(uint16_t));
 }
 
+//uint16_t ConvRcv1,ConvRcv2,ConvRcv3,ConvRcv4;
+
 void BLDC_SpeedSend(void)
 {
 	static uint16_t conv_data_send[4];
 	
 	HAL_ADC_Start_DMA(&hadc1, (uint32_t*)conv_data_send, sizeof(conv_data_send));
+//	ConvRcv1 = conv_data_send[0];
+//	ConvRcv2 = conv_data_send[1];
+//	ConvRcv3 = conv_data_send[2];
+//	ConvRcv4 = conv_data_send[3];
 	
 	xQueueSendToBack(xQueueConvData, conv_data_send, portMAX_DELAY);
 }

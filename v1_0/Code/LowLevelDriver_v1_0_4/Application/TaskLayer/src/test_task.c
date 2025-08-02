@@ -8,10 +8,18 @@ rmt_info_t Rmt_Info;
 void Task1(void* argument)
 {
 	BLDC_Init(BLDC_Set);
-	BLDC_SpeedSet(BLDC_Set, RF, 400);
-	BLDC_SpeedSet(BLDC_Set, LF, 400);
+	BLDC_SpeedSet(BLDC_Set, RF, 300);
+	BLDC_SpeedSet(BLDC_Set, LF, 300);
+	BLDC_SpeedSet(BLDC_Set, LB, 300);
+	BLDC_SpeedSet(BLDC_Set, RB, 300);
 	BLDC_Start(RF);
 	BLDC_Start(LF);
+	BLDC_Start(LB);
+	BLDC_Start(RB);
+	BLDC_Stop(RF);
+	BLDC_Stop(LF);
+	BLDC_Stop(LB);
+	BLDC_Stop(RB);
 	BLDC_xQueueCreate();
 
 	for(;;)
