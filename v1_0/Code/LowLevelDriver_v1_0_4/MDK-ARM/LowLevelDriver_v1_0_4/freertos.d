@@ -42,6 +42,7 @@ lowleveldriver_v1_0_4\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_
 lowleveldriver_v1_0_4\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 lowleveldriver_v1_0_4\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 lowleveldriver_v1_0_4\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+lowleveldriver_v1_0_4\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h
 lowleveldriver_v1_0_4\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 lowleveldriver_v1_0_4\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 lowleveldriver_v1_0_4\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h

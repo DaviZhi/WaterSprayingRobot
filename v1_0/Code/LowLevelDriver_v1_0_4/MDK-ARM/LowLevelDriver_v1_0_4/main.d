@@ -33,6 +33,7 @@ lowleveldriver_v1_0_4\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_
 lowleveldriver_v1_0_4\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 lowleveldriver_v1_0_4\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 lowleveldriver_v1_0_4\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+lowleveldriver_v1_0_4\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h
 lowleveldriver_v1_0_4\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 lowleveldriver_v1_0_4\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 lowleveldriver_v1_0_4\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
@@ -54,6 +55,7 @@ lowleveldriver_v1_0_4\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include
 lowleveldriver_v1_0_4\main.o: ../Core/Inc/adc.h
 lowleveldriver_v1_0_4\main.o: ../Core/Inc/dma.h
 lowleveldriver_v1_0_4\main.o: ../Core/Inc/i2c.h
+lowleveldriver_v1_0_4\main.o: ../Core/Inc/rng.h
 lowleveldriver_v1_0_4\main.o: ../Core/Inc/spi.h
 lowleveldriver_v1_0_4\main.o: ../Core/Inc/tim.h
 lowleveldriver_v1_0_4\main.o: ../Core/Inc/usart.h

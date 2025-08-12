@@ -37,6 +37,7 @@ void StartDefaultTask(void const * argument)
 	for(;;)
 	{
 		Remote_ChannelGet(&Rmt_Info);
+		Remote_ChannelOneToFour_Handler(&Rmt_Info);
 		osDelay(1);
 	}
 }

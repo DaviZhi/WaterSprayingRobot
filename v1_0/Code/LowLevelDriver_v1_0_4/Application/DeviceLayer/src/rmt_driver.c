@@ -22,42 +22,40 @@ void Remote_ChannelGet(rmt_info_t* rmt_info)
 	(rmt_info->sbus_data[9] << 9)) & 0x07FF;
 	
 	//debug
-	Remote2 = rmt_info->sbus_channel[2];
-	Remote0 = rmt_info->sbus_channel[0];
-	Remote1 = rmt_info->sbus_channel[1];
-	Remote3 = rmt_info->sbus_channel[3];
+//	Remote2 = rmt_info->sbus_channel[2];
+//	Remote0 = rmt_info->sbus_channel[0];
+//	Remote1 = rmt_info->sbus_channel[1];
+//	Remote3 = rmt_info->sbus_channel[3];
 }
 
 /**	
  * @brief Remote data handler(ch1 to ch4), filt remote original data.
  * @param rmt_info structure ptr.
  * @note The chart of remote handler shows general process:
- *  ---------------                    ---------------                    --------------
- * |               | limiting filter  |               | low-pass filter  |              | 
- * | original data |----------------->| channel_temp1 |----------------->| sbus_channel |
- * |               |                  |               |                  |              |
- *  ---------------                    ---------------                    --------------
+ *  ---------------                    --------------                    --------------
+ * |               | limiting filter  |              | low-pass filter  |              | 
+ * | original data |----------------->| channel_temp |----------------->| sbus_channel |
+ * |               |                  |              |                  |              |
+ *  ---------------                    --------------                    --------------
  */
 void Remote_ChannelOneToFour_Handler(rmt_info_t* rmt_info)
 {
-	volatile static uint16_t channel_temp1[4];
-	volatile static uint16_t channel_temp2[4];
-	const uint16_t threshold = 300;
-	const float alpha = 0.8;
+	volatile static uint16_t channel_temp[4];
+	static const uint16_t threshold = 300;
+	static const float alpha = 0.8;
 	
 	for(uint8_t i = 0; i < 4; i++)
 	{
-		channel_temp1[i] = Filter_Limiting(rmt_info->sbus_channel_ori[i], threshold);
+		channel_temp[i] = Filter_Limiting(rmt_info->sbus_channel_ori[i], threshold);
 	}
 	for(uint8_t i = 0; i < 4; i++)
 	{
-		rmt_info->sbus_channel[i] = Filter_LowPass(channel_temp1[i], alpha);
+		rmt_info->sbus_channel[i] = Filter_LowPass(channel_temp[i], alpha);
 	}
 	
 	//debug
-//	for(uint8_t i = 0; i < 4; i++)
-//	{
-//		channel_temp1[i] = Filter_Limiting(rmt_info->sbus_channel_ori[i], threshold);
-//		rmt_info->sbus_channel[i] = Filter_LowPass(channel_temp1[i], alpha);
-//	}
+	Remote2 = rmt_info->sbus_channel[2];
+	Remote0 = rmt_info->sbus_channel[0];
+	Remote1 = rmt_info->sbus_channel[1];
+	Remote3 = rmt_info->sbus_channel[3];
 }
