@@ -41,4 +41,5 @@ lowleveldriver_v1_0_4\stpr_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4
 lowleveldriver_v1_0_4\stpr_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 lowleveldriver_v1_0_4\stpr_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 lowleveldriver_v1_0_4\stpr_driver.o: ../Core/Inc/tim.h
+lowleveldriver_v1_0_4\stpr_driver.o: ..\Application\SystemLayer\inc\dev.h
 lowleveldriver_v1_0_4\stpr_driver.o: ../Application/DeviceLayer/inc/stpr_xdefine.h

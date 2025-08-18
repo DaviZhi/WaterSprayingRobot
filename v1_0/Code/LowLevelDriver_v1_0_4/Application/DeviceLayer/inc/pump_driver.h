@@ -4,6 +4,8 @@
 #include "gpio.h"
 #include "tim.h"
 
+#include "dev.h"
+
 /* Private enum---------*/
 typedef enum
 {
@@ -18,6 +20,7 @@ typedef struct
 {
 	uint16_t flowrate_set;
 	GPIO_PinState pump_in1_set;
+	dev_status_e pump_status;
 	
 }pump_set_t;
 
@@ -28,6 +31,6 @@ static void Pump_EMO(pump_set_t* pump_set);
 void Pump_Init(pump_set_t* pump_set);
 void Pump_FlowRateSet(pump_set_t* pump_set, uint16_t flwrt_set);
 void Pump_ModeSet(pump_set_t* pump_set, pump_modeset_e pump_mdset);
-void Pump_Start(void);
+void Pump_Start(pump_set_t* pump_set);
 
 #endif

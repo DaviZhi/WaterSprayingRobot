@@ -1,28 +1,38 @@
 #include "filter.h"
 
-uint16_t Filter_LowPass(uint16_t sample_new, float alpha)
+/**	
+ * @brief Low pass filter implementation.
+ * @param filter_info structure ptr
+ * @param new sample value
+ * @param alpha factor
+ * @return filtered value
+ */
+uint16_t Filter_LowPass(filter_info_t* filter_info, float sample_new, float alpha)
 {
-	static float result_prev = 0;
+	filter_info->new_value = alpha * sample_new + (1 - alpha) * filter_info->prev_value;
+	filter_info->prev_value = filter_info->new_value;
 	
-	float result_new = alpha * (float)sample_new + (1 - alpha) * (float)result_prev;
-	result_prev = result_new;
-	
-	return (uint16_t)result_new;
+	return (uint16_t)filter_info->new_value;
 }
 
-uint16_t Filter_Limiting(uint16_t data, uint16_t limit_threshold)
+/**	
+ * @brief Limiting filter implementation.
+ * @param filter_info structure ptr
+ * @param data for limiting
+ * @param limit threshold
+ * @return filtered value
+ */
+uint16_t Filter_Limiting(filter_info_t* filter_info, float data, float limit_threshold)
 {
-	static uint16_t result_prev = 0, result_new = 0;
-	
-	if((uint16_t)abs(data - result_prev) > limit_threshold)
+	if(fabs(data - filter_info->prev_value) > limit_threshold)
 	{
-		result_new = result_prev;
+		filter_info->new_value = filter_info->prev_value;
 	}
-	else if((uint16_t)abs(data - result_prev) <= limit_threshold)
+	else
 	{
-		result_new = data;
+		filter_info->new_value = data;
 	}
-	result_prev = result_new;
+	filter_info->prev_value = filter_info->new_value;
 	
-	return result_new;
+	return (uint16_t)filter_info->new_value;
 }

@@ -1,6 +1,7 @@
 #include "stpr_driver.h"
 #include "stpr_xdefine.h"
 
+
 /**	
  * @brief Set rotation direction of stepper.
  * @param stpr_set structure ptr
@@ -12,6 +13,8 @@ void Stepper_DirectSet(stpr_set_t* stpr_set, GPIO_PinState dir_set)
 {
 	stpr_set->direct_set = dir_set;
 	HAL_GPIO_WritePin(STEPPER_DIR_GPIO_Port, STEPPER_DIR_Pin, stpr_set->direct_set);
+	
+	stpr_set->stpr_status = DEV_OK;
 }
 
 /**	
@@ -23,8 +26,10 @@ void Stepper_DirectSet(stpr_set_t* stpr_set, GPIO_PinState dir_set)
  */
 void Stepper_SleepSet(stpr_set_t* stpr_set, GPIO_PinState slp_set)
 {
-	stpr_set->stpr_status.sleep_status = slp_set;
-	HAL_GPIO_WritePin(STEPPER_nSLP_GPIO_Port, STEPPER_nSLP_Pin, stpr_set->stpr_status.sleep_status);
+	stpr_set->stpr_status_set.sleep_status_set = slp_set;
+	HAL_GPIO_WritePin(STEPPER_nSLP_GPIO_Port, STEPPER_nSLP_Pin, stpr_set->stpr_status_set.sleep_status_set);
+	
+	stpr_set->stpr_status = DEV_OK;
 }
 
 /**	
@@ -36,8 +41,10 @@ void Stepper_SleepSet(stpr_set_t* stpr_set, GPIO_PinState slp_set)
  */
 void Stepper_EnableSet(stpr_set_t* stpr_set, GPIO_PinState ebl_set)
 {
-	stpr_set->stpr_status.enable_status = ebl_set;
-	HAL_GPIO_WritePin(STEPPER_nENBL_GPIO_Port, STEPPER_nENBL_Pin, stpr_set->stpr_status.enable_status);
+	stpr_set->stpr_status_set.enable_status_set = ebl_set;
+	HAL_GPIO_WritePin(STEPPER_nENBL_GPIO_Port, STEPPER_nENBL_Pin, stpr_set->stpr_status_set.enable_status_set);
+	
+	stpr_set->stpr_status = DEV_OK;
 }
 
 /**	
@@ -49,8 +56,10 @@ void Stepper_EnableSet(stpr_set_t* stpr_set, GPIO_PinState ebl_set)
  */
 void Stepper_ResetSet(stpr_set_t* stpr_set, GPIO_PinState rst_set)
 {
-	stpr_set->stpr_status.reset_status = rst_set;
-	HAL_GPIO_WritePin(STEPPER_nRST_GPIO_Port, STEPPER_nRST_Pin, stpr_set->stpr_status.reset_status);
+	stpr_set->stpr_status_set.reset_status_set = rst_set;
+	HAL_GPIO_WritePin(STEPPER_nRST_GPIO_Port, STEPPER_nRST_Pin, stpr_set->stpr_status_set.reset_status_set);
+	
+	stpr_set->stpr_status = DEV_OK;
 }
 
 /**	
@@ -64,6 +73,8 @@ void Stepper_DecaySet(stpr_set_t* stpr_set, GPIO_PinState dcy_set)
 {
 	stpr_set->decay_set = dcy_set;
 	HAL_GPIO_WritePin(STEPPER_DECAY_GPIO_Port, STEPPER_DECAY_Pin, stpr_set->decay_set);
+	
+	stpr_set->stpr_status = DEV_OK;
 }
 
 /**	
@@ -89,6 +100,8 @@ void Stepper_MicrostepSet(stpr_set_t* stpr_set, stpr_microstep_e stpr_mcrstp)
 	HAL_GPIO_WritePin(STEPPER_MODE0_GPIO_Port, STEPPER_MODE0_Pin, (GPIO_PinState)mode[0]);
 	HAL_GPIO_WritePin(STEPPER_MODE1_GPIO_Port, STEPPER_MODE1_Pin, (GPIO_PinState)mode[1]);
 	HAL_GPIO_WritePin(STEPPER_MODE2_GPIO_Port, STEPPER_MODE2_Pin, (GPIO_PinState)mode[2]);
+	
+	stpr_set->stpr_status = DEV_OK;
 }
 
 /**	
@@ -105,34 +118,33 @@ void Stepper_StepFreqSet(stpr_set_t* stpr_set, uint32_t stpr_stpfrq)
 	
 	__HAL_TIM_SET_AUTORELOAD(&htim12, (tim12_clock / (htim12.Init.Prescaler * stpr_set->stepfreq_set)) - 1);
 	__HAL_TIM_SET_COMPARE(&htim12, TIM_CHANNEL_2, (tim12_clock / (htim12.Init.Prescaler * stpr_set->stepfreq_set)) / 2);
+	
+	stpr_set->stpr_status = DEV_OK;
 }
 
 /**	
  * @brief Get fault flag of stepper.
  * @param stpr_flag structure ptr
- * @return fault flag
  */
-uint8_t Stepper_FaultFlagGet(stpr_flag_t* stpr_flag)
+void Stepper_FaultFlagGet(stpr_flag_t* stpr_flag)
 {
 	stpr_flag->fault_flag = HAL_GPIO_ReadPin(STEPPER_nFLT_GPIO_Port, STEPPER_nFLT_Pin);
-	return stpr_flag->fault_flag;
 }
 
 /**	
  * @brief Set decay mode of stepper.
  * @param stpr_set structure ptr
- * @return home flag
  */
-uint8_t Stepper_HomeFlagGet(stpr_flag_t* stpr_flag)
+void Stepper_HomeFlagGet(stpr_flag_t* stpr_flag)
 {
 	stpr_flag->home_flag = HAL_GPIO_ReadPin(STEPPER_nHOME_GPIO_Port, STEPPER_nHOME_Pin);
-	return stpr_flag->home_flag;
 }
 
 /**	
  * @brief Start stepper.
  */
-void Stepper_Start(void)
+void Stepper_Start(stpr_set_t* stpr_set)
 {
 	HAL_TIM_PWM_Start(&htim12, TIM_CHANNEL_2);
+	stpr_set->stpr_status = DEV_OK;
 }

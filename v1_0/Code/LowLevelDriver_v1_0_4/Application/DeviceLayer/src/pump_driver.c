@@ -12,6 +12,8 @@ void Pump_Init(pump_set_t* pump_set)
 	
 	__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, pump_set->flowrate_set);
 	HAL_GPIO_WritePin(PUMP_IN1_GPIO_Port, PUMP_IN1_Pin, pump_set->pump_in1_set);
+	
+	pump_set->pump_status = DEV_OK;
 }
 
 /**
@@ -25,10 +27,12 @@ void Pump_FlowRateSet(pump_set_t* pump_set, uint16_t flwrt_set)
 	{
 		pump_set->flowrate_set = flwrt_set;
 		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, pump_set->flowrate_set);
+		pump_set->pump_status = DEV_OK;
 	}
 	else
 	{
 		Pump_EMO(pump_set);
+		pump_set->pump_status = DEV_ERR;
 	}
 }
 
@@ -50,6 +54,7 @@ void Pump_ModeSet(pump_set_t* pump_set, pump_modeset_e pump_mdset)
 			pump_set->pump_in1_set = PUMP_IN1_RESET;
 			__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, pump_set->flowrate_set);
 			HAL_GPIO_WritePin(PUMP_IN1_GPIO_Port, PUMP_IN1_Pin, pump_set->pump_in1_set);
+			pump_set->pump_status = DEV_OK;
 			break;
 		}
 		case PUMP_BRAKE:
@@ -58,17 +63,20 @@ void Pump_ModeSet(pump_set_t* pump_set, pump_modeset_e pump_mdset)
 			pump_set->pump_in1_set = PUMP_IN1_SET;
 			__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, pump_set->flowrate_set);
 			HAL_GPIO_WritePin(PUMP_IN1_GPIO_Port, PUMP_IN1_Pin, pump_set->pump_in1_set);
+			pump_set->pump_status = DEV_OK;
 			break;
 		}
 		case PUMP_ACTIVE:
 		{
 			pump_set->pump_in1_set = PUMP_IN1_SET;
 			HAL_GPIO_WritePin(PUMP_IN1_GPIO_Port, PUMP_IN1_Pin, pump_set->pump_in1_set);
+			pump_set->pump_status = DEV_OK;
 			break;
 		}
 		default:
 		{
 			Pump_EMO(pump_set);
+			pump_set->pump_status = DEV_ERR;
 			break;
 		}
 	}
@@ -76,10 +84,12 @@ void Pump_ModeSet(pump_set_t* pump_set, pump_modeset_e pump_mdset)
 
 /**
  * @brief Start pump.
+ * @param pump_set structure ptr
  */
-void Pump_Start(void)
+void Pump_Start(pump_set_t* pump_set)
 {
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
+	pump_set->pump_status = DEV_OK;
 }
 
 /**	

@@ -41,6 +41,7 @@ lowleveldriver_v1_0_4\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4
 lowleveldriver_v1_0_4\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 lowleveldriver_v1_0_4\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 lowleveldriver_v1_0_4\bldc_driver.o: ../Core/Inc/adc.h
+lowleveldriver_v1_0_4\bldc_driver.o: ..\Application\SystemLayer\inc\dev.h
 lowleveldriver_v1_0_4\bldc_driver.o: ../Application/DeviceLayer/inc/bldc_xdefine.h
 lowleveldriver_v1_0_4\bldc_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 lowleveldriver_v1_0_4\bldc_driver.o: ../Core/Inc/FreeRTOSConfig.h

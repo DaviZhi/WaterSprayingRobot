@@ -4,12 +4,17 @@
 #include "usart.h"
 #include "gpio.h"
 
+#include "filter.h"
+#include "dev.h"
+
 /* Private struct----------*/
 typedef struct
 {
 	uint8_t sbus_data[25];
 	uint16_t sbus_channel[6];
 	uint16_t sbus_channel_ori[6];
+	filter_info_t rmt_filter_info[4];
+	dev_status_e rmt_status;
 	
 }rmt_info_t;
 

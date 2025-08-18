@@ -4,6 +4,8 @@
 #include "gpio.h"
 #include "tim.h"
 
+#include "dev.h"
+
 /* Private enum---------*/
 typedef enum
 {
@@ -26,11 +28,11 @@ typedef struct
 
 typedef struct
 {
-	GPIO_PinState enable_status;
-	GPIO_PinState sleep_status;
-	GPIO_PinState reset_status;
+	GPIO_PinState enable_status_set;
+	GPIO_PinState sleep_status_set;
+	GPIO_PinState reset_status_set;
 	
-}stpr_status_t;
+}stpr_status_set_t;
 
 typedef struct
 {
@@ -39,8 +41,9 @@ typedef struct
 	uint8_t microstep_set;
 	uint32_t stepfreq_set;
 	
-	stpr_status_t stpr_status;
+	stpr_status_set_t stpr_status_set;
 	stpr_flag_t stpr_flag;
+	dev_status_e stpr_status;
 	
 }stpr_set_t;
 
@@ -52,8 +55,8 @@ void Stepper_ResetSet(stpr_set_t* stpr_set, GPIO_PinState rst_set);
 void Stepper_DecaySet(stpr_set_t* stpr_set, GPIO_PinState dcy_set);
 void Stepper_MicrostepSet(stpr_set_t* stpr_set, stpr_microstep_e stpr_mcrstp);
 void Stepper_StepFreqSet(stpr_set_t* stpr_set, uint32_t stpr_stpfrq);
-uint8_t Stepper_FaultFlagGet(stpr_flag_t* stpr_flag);
-uint8_t Stepper_HomeFlagGet(stpr_flag_t* stpr_flag);
-void Stepper_Start(void);
+void Stepper_FaultFlagGet(stpr_flag_t* stpr_flag);
+void Stepper_HomeFlagGet(stpr_flag_t* stpr_flag);
+void Stepper_Start(stpr_set_t* stpr_set);
 
 #endif
