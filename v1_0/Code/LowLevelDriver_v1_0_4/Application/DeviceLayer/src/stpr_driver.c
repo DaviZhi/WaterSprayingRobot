@@ -6,8 +6,8 @@
  * @brief Set rotation direction of stepper.
  * @param stpr_set structure ptr
  * @param stepper rotation direction set
- * 		@arg STEPPER_CCW
- * 		@arg STEPPER_CW
+ * 		@arg STEPPER_CCW: Counterclockwise rotation
+ * 		@arg STEPPER_CW: Clockwise rotation
  */
 void Stepper_DirectSet(stpr_set_t* stpr_set, GPIO_PinState dir_set)
 {
@@ -21,8 +21,8 @@ void Stepper_DirectSet(stpr_set_t* stpr_set, GPIO_PinState dir_set)
  * @brief Set work mode of stepper.
  * @param stpr_set structure ptr
  * @param stepper work mode set
- * 		@arg STEPPER_SLEEP
- * 		@arg STEPPER_ACTIVE
+ * 		@arg STEPPER_SLEEP: Stepper into sleep-mode
+ * 		@arg STEPPER_ACTIVE: Stepper active
  */
 void Stepper_SleepSet(stpr_set_t* stpr_set, GPIO_PinState slp_set)
 {
@@ -81,12 +81,13 @@ void Stepper_DecaySet(stpr_set_t* stpr_set, GPIO_PinState dcy_set)
  * @brief Set microstep of stepper.
  * @param stpr_set structure ptr
  * @param stepper microstep set
- * 		@arg STEP_FULL
- * 		@arg STEP_HALF
- * 		@arg STEP_QUARTER
- * 		@arg STEP_8MICRO
- * 		@arg STEP_16MICRO
- * 		@arg STEP_32MICRO
+ * @note For different model of stepper, @refer STEPPER_STEP_ANGLE.
+ * 		@arg STEP_FULL: STEPPER_STEP_ANGLE
+ * 		@arg STEP_HALF: STEPPER_STEP_ANGLE / 2
+ * 		@arg STEP_QUARTER: STEPPER_STEP_ANGLE / 4
+ * 		@arg STEP_8MICRO: STEPPER_STEP_ANGLE / 8
+ * 		@arg STEP_16MICRO: STEPPER_STEP_ANGLE / 16
+ * 		@arg STEP_32MICRO: STEPPER_STEP_ANGLE / 32
  */
 void Stepper_MicrostepSet(stpr_set_t* stpr_set, stpr_microstep_e stpr_mcrstp)
 {
@@ -142,6 +143,7 @@ void Stepper_HomeFlagGet(stpr_flag_t* stpr_flag)
 
 /**	
  * @brief Start stepper.
+ * @param stpr_set structure ptr
  */
 void Stepper_Start(stpr_set_t* stpr_set)
 {

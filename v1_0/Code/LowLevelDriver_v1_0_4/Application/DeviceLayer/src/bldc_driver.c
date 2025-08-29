@@ -4,7 +4,7 @@
 #include "queue.h"
 
 /**
- * @brief Initialize all BLDC to proper work mode.
+ * @brief Initialize appointed BLDC to proper work mode.
  * @param bldc_set structure ptr
  * @param bldc number
  *		@arg LF
@@ -130,8 +130,8 @@ void BLDC_BrakeSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState bra_
  *		@arg LB
  *		@arg RB
  * @param bldc revolution(rotation) direction
- * 		@arg BLDC_CW
- * 		@arg BLDC_CCW
+ * 		@arg BLDC_CW: Clockwise rotation
+ * 		@arg BLDC_CCW: Counterclockwise rotation
  */
 void BLDC_RevoSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState rev_set)
 {
@@ -234,11 +234,11 @@ void BLDC_SpeedSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, uint16_t spd_set)
 	}
 	else
 	{
+		BLDC_EMO(bldc_set);
 		bldc_set[LF].bldc_status = DEV_ERR;
 		bldc_set[RF].bldc_status = DEV_ERR;
 		bldc_set[LB].bldc_status = DEV_ERR;
 		bldc_set[RB].bldc_status = DEV_ERR;
-		BLDC_EMO(bldc_set);
 	}
 }
 
@@ -246,14 +246,14 @@ xQueueHandle xQueueConvData;
 
 void BLDC_xQueueCreate(void)
 {
-	xQueueConvData = xQueueCreate(4, sizeof(uint16_t));
+	xQueueConvData = xQueueCreate(BLDC_NUM, sizeof(uint16_t));
 }
 
 //uint16_t ConvRcv1,ConvRcv2,ConvRcv3,ConvRcv4;
 
 void BLDC_SpeedSend(void)
 {
-	static uint16_t conv_data_send[4];
+	static uint16_t conv_data_send[BLDC_NUM];
 	
 	HAL_ADC_Start_DMA(&hadc1, (uint32_t*)conv_data_send, sizeof(conv_data_send));
 //	ConvRcv1 = conv_data_send[0];
@@ -266,14 +266,18 @@ void BLDC_SpeedSend(void)
 
 void BLDC_SpeedReceive(bldc_set_t* bldc_set)
 {
-	static uint16_t conv_data_rcv[4];
+//	static uint16_t conv_data_rcv[4];
 	
-	if(xQueueReceive(xQueueConvData, conv_data_rcv, portMAX_DELAY) == pdPASS)
+	if(xQueueReceive(xQueueConvData, &bldc_set->speed_get, portMAX_DELAY) == pdPASS)
 	{
-		bldc_set[LF].speed_get = conv_data_rcv[0];
-		bldc_set[RF].speed_get = conv_data_rcv[1];
-		bldc_set[RB].speed_get = conv_data_rcv[2];
-		bldc_set[LB].speed_get = conv_data_rcv[3];
+		bldc_set[LF].bldc_status = DEV_OK;
+		bldc_set[RF].bldc_status = DEV_OK;
+		bldc_set[RB].bldc_status = DEV_OK;
+		bldc_set[LB].bldc_status = DEV_OK;
+//		bldc_set[LF].speed_get = conv_data_rcv[0];
+//		bldc_set[RF].speed_get = conv_data_rcv[1];
+//		bldc_set[RB].speed_get = conv_data_rcv[2];
+//		bldc_set[LB].speed_get = conv_data_rcv[3];
 	}
 }
 

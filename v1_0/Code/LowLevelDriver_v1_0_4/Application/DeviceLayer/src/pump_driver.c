@@ -40,9 +40,9 @@ void Pump_FlowRateSet(pump_set_t* pump_set, uint16_t flwrt_set)
  * @brief Set mode of pump.
  * @param pump_set structure ptr
  * @param pump mode
- *		@arg PUMP_SLEEP
- *		@arg PUMP_BRAKE
- *		@arg PUMP_ACTIVE
+*		@arg PUMP_SLEEP: Pump into sleep-mode
+*		@arg PUMP_BRAKE: Pump into brake
+*		@arg PUMP_ACTIVE: Pump active
  */
 void Pump_ModeSet(pump_set_t* pump_set, pump_modeset_e pump_mdset)
 {

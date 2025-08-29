@@ -1532,14 +1532,19 @@
               <FilePath>..\Application\DeviceLayer\inc\rmt_xdefine.h</FilePath>
             </File>
             <File>
-              <FileName>w25q16_driver.c</FileName>
+              <FileName>ex_flash_driver.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Application\DeviceLayer\src\w25q16_driver.c</FilePath>
+              <FilePath>..\Application\DeviceLayer\src\ex_flash_driver.c</FilePath>
             </File>
             <File>
-              <FileName>w25q16_driver.h</FileName>
+              <FileName>ex_flash_driver.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Application\DeviceLayer\inc\w25q16_driver.h</FilePath>
+              <FilePath>..\Application\DeviceLayer\inc\ex_flash_driver.h</FilePath>
+            </File>
+            <File>
+              <FileName>ex_flash_xdefine.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Application\DeviceLayer\inc\ex_flash_xdefine.h</FilePath>
             </File>
           </Files>
         </Group>

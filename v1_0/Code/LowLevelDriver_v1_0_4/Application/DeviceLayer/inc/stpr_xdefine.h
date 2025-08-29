@@ -1,6 +1,8 @@
 #ifndef STPR_XDEFINE_H
 #define STPR_XDEFINE_H
 
+#define		STEPPER_STEP_ANGLE	1.8f
+
 /* stepper rotation direction set */
 #define		STEPPER_CCW			GPIO_PIN_RESET
 #define		STEPPER_CW			GPIO_PIN_SET
