@@ -8,10 +8,10 @@ rmt_info_t Rmt_Info;
 void Task1(void* argument)
 {
 //	BLDC_Init(BLDC_Set);
-	BLDC_SpeedSet(BLDC_Set, RF, 999);
-	BLDC_SpeedSet(BLDC_Set, LF, 999);
-	BLDC_SpeedSet(BLDC_Set, LB, 999);
-	BLDC_SpeedSet(BLDC_Set, RB, 999);
+//	BLDC_SpeedSet(BLDC_Set, RF, 999);
+//	BLDC_SpeedSet(BLDC_Set, LF, 999);
+//	BLDC_SpeedSet(BLDC_Set, LB, 999);
+//	BLDC_SpeedSet(BLDC_Set, RB, 999);
 //	BLDC_Start(RF);
 //	BLDC_Start(LF);
 //	BLDC_Start(LB);
@@ -36,7 +36,7 @@ void StartDefaultTask(void const * argument)
 	
 	for(;;)
 	{
-		Remote_ChannelGet(&Rmt_Info);
+//		Remote_ChannelGet(&Rmt_Info);
 		Remote_ChannelOneToFour_Handler(&Rmt_Info);
 		osDelay(1);
 	}

@@ -48,15 +48,15 @@ typedef struct
 }stpr_set_t;
 
 /* Stepper_Exported function------------------------------------------------------*/
-void Stepper_DirectSet(stpr_set_t* stpr_set, GPIO_PinState dir_set);
-void Stepper_SleepSet(stpr_set_t* stpr_set, GPIO_PinState slp_set);
-void Stepper_EnableSet(stpr_set_t* stpr_set, GPIO_PinState ebl_set);
-void Stepper_ResetSet(stpr_set_t* stpr_set, GPIO_PinState rst_set);
-void Stepper_DecaySet(stpr_set_t* stpr_set, GPIO_PinState dcy_set);
-void Stepper_MicrostepSet(stpr_set_t* stpr_set, stpr_microstep_e stpr_mcrstp);
-void Stepper_StepFreqSet(stpr_set_t* stpr_set, uint32_t stpr_stpfrq);
-void Stepper_FaultFlagGet(stpr_flag_t* stpr_flag);
-void Stepper_HomeFlagGet(stpr_flag_t* stpr_flag);
+void Stepper_SetDirect(stpr_set_t* stpr_set, GPIO_PinState dir_set);
+void Stepper_SetSleep(stpr_set_t* stpr_set, GPIO_PinState slp_set);
+void Stepper_SetEnable(stpr_set_t* stpr_set, GPIO_PinState ebl_set);
+void Stepper_SetReset(stpr_set_t* stpr_set, GPIO_PinState rst_set);
+void Stepper_SetDecay(stpr_set_t* stpr_set, GPIO_PinState dcy_set);
+void Stepper_SetMicrostep(stpr_set_t* stpr_set, stpr_microstep_e stpr_mcrstp);
+void Stepper_SetStepFreq(stpr_set_t* stpr_set, uint32_t stpr_stpfrq);
+void Stepper_GetFaultFlag(stpr_flag_t* stpr_flag);
+void Stepper_GetHomeFlag(stpr_flag_t* stpr_flag);
 void Stepper_Start(stpr_set_t* stpr_set);
 
 #endif

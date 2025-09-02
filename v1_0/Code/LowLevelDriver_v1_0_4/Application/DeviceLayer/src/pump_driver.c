@@ -21,7 +21,7 @@ void Pump_Init(pump_set_t* pump_set)
  * @param pump_set structure ptr
  * @param flowrate value, limited up to @refer PUMP_FLOWRATE_MAX
  */
-void Pump_FlowRateSet(pump_set_t* pump_set, uint16_t flwrt_set)
+void Pump_SetFlowrate(pump_set_t* pump_set, uint16_t flwrt_set)
 {
 	if(flwrt_set <= PUMP_FLOWRATE_MAX)
 	{
@@ -44,7 +44,7 @@ void Pump_FlowRateSet(pump_set_t* pump_set, uint16_t flwrt_set)
 *		@arg PUMP_BRAKE: Pump into brake
 *		@arg PUMP_ACTIVE: Pump active
  */
-void Pump_ModeSet(pump_set_t* pump_set, pump_modeset_e pump_mdset)
+void Pump_SetMode(pump_set_t* pump_set, pump_modeset_e pump_mdset)
 {
 	switch(pump_mdset)
 	{

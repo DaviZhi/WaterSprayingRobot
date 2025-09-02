@@ -8,7 +8,7 @@ uint16_t Remote0,Remote2,Remote1,Remote3;	//test param
  * @brief Receive data from receiver and convert them into channel value, every 11 bit data compose a channel.
  * @param rmt_info structure ptr.
  */
-void Remote_ChannelGet(rmt_info_t* rmt_info)
+void Remote_GetChannel(rmt_info_t* rmt_info)
 {
 	if(HAL_UART_Receive_DMA(&huart2, rmt_info->sbus_data, sizeof(rmt_info->sbus_data)) != HAL_OK)
 	{

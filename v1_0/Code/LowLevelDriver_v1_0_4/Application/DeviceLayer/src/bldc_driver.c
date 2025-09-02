@@ -77,7 +77,7 @@ void BLDC_Init(bldc_set_t* bldc_set, bldc_num_e bldc_num)
  * 		@arg BLDC_BRAKE
  * 		@arg BLDC_LOOSE
  */
-void BLDC_BrakeSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState bra_set)
+void BLDC_SetBrake(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState bra_set)
 {
 	switch(bldc_num)
 	{
@@ -133,7 +133,7 @@ void BLDC_BrakeSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState bra_
  * 		@arg BLDC_CW: Clockwise rotation
  * 		@arg BLDC_CCW: Counterclockwise rotation
  */
-void BLDC_RevoSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState rev_set)
+void BLDC_SetRevo(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState rev_set)
 {
 	switch(bldc_num)
 	{
@@ -187,7 +187,7 @@ void BLDC_RevoSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState rev_s
  *		@arg RB
  * @param bldc speed value, limited up to @refer BLDC_SPDMAX
  */
-void BLDC_SpeedSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, uint16_t spd_set)
+void BLDC_SetSpeed(bldc_set_t* bldc_set, bldc_num_e bldc_num, uint16_t spd_set)
 {
 	if(spd_set <= BLDC_SPDMAX)
 	{

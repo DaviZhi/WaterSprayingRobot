@@ -29,8 +29,8 @@ static void Pump_EMO(pump_set_t* pump_set);
 
 /* Pump_Exported function------------------------------------------------------*/
 void Pump_Init(pump_set_t* pump_set);
-void Pump_FlowRateSet(pump_set_t* pump_set, uint16_t flwrt_set);
-void Pump_ModeSet(pump_set_t* pump_set, pump_modeset_e pump_mdset);
+void Pump_SetFlowrate(pump_set_t* pump_set, uint16_t flwrt_set);
+void Pump_SetMode(pump_set_t* pump_set, pump_modeset_e pump_mdset);
 void Pump_Start(pump_set_t* pump_set);
 
 #endif

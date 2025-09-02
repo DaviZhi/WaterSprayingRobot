@@ -549,6 +549,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("E:/WaterSprayingRobot/v1_0/Code/CompanionDriver_v1_0_5/build/esp-idf/lvgl/cmake_install.cmake")
+  include("E:/WaterSprayingRobot/v1_0/Code/CompanionDriver_v1_0_5/build/esp-idf/third_party/cmake_install.cmake")
 endif()
 

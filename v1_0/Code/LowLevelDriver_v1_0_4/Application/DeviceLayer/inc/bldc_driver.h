@@ -31,9 +31,9 @@ static void BLDC_EMO(bldc_set_t* bldc_set);
 
 /* BLDC_Exported function------------------------------------------------------*/
 void BLDC_Init(bldc_set_t* bldc_set, bldc_num_e bldc_num);
-void BLDC_BrakeSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState bra_set);
-void BLDC_RevoSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState rev_set);
-void BLDC_SpeedSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, uint16_t spd_set);
+void BLDC_SetBrake(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState bra_set);
+void BLDC_SetRevo(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState rev_set);
+void BLDC_SetSpeed(bldc_set_t* bldc_set, bldc_num_e bldc_num, uint16_t spd_set);
 void BLDC_xQueueCreate(void);
 void BLDC_SpeedSend(void);
 void BLDC_SpeedReceive(bldc_set_t* bldc_set);
