@@ -1,0 +1,15 @@
+lowleveldriver\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
+lowleveldriver\event_groups.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+lowleveldriver\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+lowleveldriver\event_groups.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lowleveldriver\event_groups.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lowleveldriver\event_groups.o: ../Core/Inc/FreeRTOSConfig.h
+lowleveldriver\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+lowleveldriver\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+lowleveldriver\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+lowleveldriver\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+lowleveldriver\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+lowleveldriver\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+lowleveldriver\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+lowleveldriver\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+lowleveldriver\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h

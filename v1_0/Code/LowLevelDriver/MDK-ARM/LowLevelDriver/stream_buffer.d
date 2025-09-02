@@ -1,0 +1,14 @@
+lowleveldriver\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+lowleveldriver\stream_buffer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lowleveldriver\stream_buffer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+lowleveldriver\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+lowleveldriver\stream_buffer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lowleveldriver\stream_buffer.o: ../Core/Inc/FreeRTOSConfig.h
+lowleveldriver\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+lowleveldriver\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+lowleveldriver\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+lowleveldriver\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+lowleveldriver\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+lowleveldriver\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+lowleveldriver\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+lowleveldriver\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h

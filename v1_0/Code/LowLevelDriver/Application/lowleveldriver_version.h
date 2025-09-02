@@ -1,0 +1,6 @@
+#ifndef LOW_LEVEL_DRIVER_VERSION_H
+#define LOW_LEVEL_DRIVER_VERSION_H
+
+#define LLD_VERSION "v1.0.4"
+
+#endif

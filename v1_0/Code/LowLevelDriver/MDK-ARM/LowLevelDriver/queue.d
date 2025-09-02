@@ -1,0 +1,15 @@
+lowleveldriver\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+lowleveldriver\queue.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+lowleveldriver\queue.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+lowleveldriver\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+lowleveldriver\queue.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lowleveldriver\queue.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lowleveldriver\queue.o: ../Core/Inc/FreeRTOSConfig.h
+lowleveldriver\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+lowleveldriver\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+lowleveldriver\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+lowleveldriver\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+lowleveldriver\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+lowleveldriver\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+lowleveldriver\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+lowleveldriver\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h

@@ -1,0 +1,12 @@
+lowleveldriver\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+lowleveldriver\list.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+lowleveldriver\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+lowleveldriver\list.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lowleveldriver\list.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lowleveldriver\list.o: ../Core/Inc/FreeRTOSConfig.h
+lowleveldriver\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+lowleveldriver\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+lowleveldriver\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+lowleveldriver\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+lowleveldriver\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+lowleveldriver\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
