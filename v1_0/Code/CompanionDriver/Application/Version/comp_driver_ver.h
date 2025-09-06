@@ -1,0 +1,6 @@
+#ifndef COMPANION_DRIVER_VERSION_H
+#define COMPANION_DRIVER_VERSION_H
+
+#define CD_VERSION "1.0.4"
+
+#endif

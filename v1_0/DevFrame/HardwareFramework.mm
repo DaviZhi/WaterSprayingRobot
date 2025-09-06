@@ -1,0 +1,97 @@
+<map version="1.0.1">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1757177178389" ID="root" MODIFIED="1757177178389" TEXT="Hardware Framework">
+<node CREATED="1757177178389" ID="6d7deb5135e89e36c307f1e74415ad6d" MODIFIED="1757177178389" POSITION="right" STYLE="bubble" TEXT="Chassis Motors">
+<node CREATED="1757177178389" ID="b521436ae2a61a7b1222f382c19d01fa" MODIFIED="1757177178389" STYLE="fork" TEXT="XL6019 boosts voltage to 24V to power 4 motors"/>
+<node CREATED="1757177178389" ID="445e06daf59b9fa5317df3999eb1a7cc" MODIFIED="1757177178389" STYLE="fork" TEXT="Output interface: Positive and negative terminals"/>
+</node>
+<node CREATED="1757177178389" ID="100e591cd97c3a4eabf3485239d35f4e" MODIFIED="1757177178389" POSITION="right" STYLE="bubble" TEXT="Middle Layer Motor (Pump)">
+<node CREATED="1757177178389" ID="6a784940dddcd47385a29ff4af3aac81" MODIFIED="1757177178389" STYLE="fork" TEXT="TPS5430 steps down voltage to 12V"/>
+<node CREATED="1757177178389" ID="13fca6e73641e9e0fecdadf3c755b30c" MODIFIED="1757177178389" STYLE="fork" TEXT="DRV8870 controls the water pump"/>
+<node CREATED="1757177178389" ID="f70f914a4d4974cfc32ff4af9b0acbe5" MODIFIED="1757177178389" STYLE="fork" TEXT="Test point: 12V output of TPS5430"/>
+<node CREATED="1757177178389" ID="a2f69f5af1afc52a622c3e4f736f8e96" MODIFIED="1757177178389" STYLE="fork" TEXT="Output interface: DRV8870 VOUT1 and VOUT2"/>
+<node CREATED="1757177178389" ID="ad7b8a5798c81fe8878d8ee8559baeb1" MODIFIED="1757177178389" STYLE="fork" TEXT="Input interface: IN1 IN2 VREF"/>
+</node>
+<node CREATED="1757177178389" ID="386b0ac483f9d8824c0676254787614d" MODIFIED="1757177199393" POSITION="right" STYLE="bubble" TEXT="Upper Layer Motor (Stepper)">
+<node CREATED="1757177178389" ID="a6dc6f343c45db11767f3b1a0aa293c3" MODIFIED="1757177178389" STYLE="fork" TEXT="XL6019 boosts voltage to 24V"/>
+<node CREATED="1757177178389" ID="ee8301b9227df6c3b4ee02ca00fc88bd" MODIFIED="1757177178389" STYLE="fork" TEXT="DRV8825 controls the stepper motor"/>
+<node CREATED="1757177178389" ID="c433ca9c004d04b787294822783dee7b" MODIFIED="1757177178389" STYLE="fork" TEXT="Test point: 24V output of XL6019"/>
+<node CREATED="1757177178389" ID="0dce26e7255ab65e28509192345cc633" MODIFIED="1757177178389" STYLE="fork" TEXT="Output interface: Four phases of the stepper motor"/>
+<node CREATED="1757177178389" ID="d7c72c97ef5002833bbda60c4cd615b8" MODIFIED="1757177178389" STYLE="fork" TEXT="Input interface: Refer to datasheet, total of 11 interfaces"/>
+</node>
+<node CREATED="1757177178389" ID="cfb881fac787339a9705f8edd3f72d3d" MODIFIED="1757177227668" POSITION="right" STYLE="bubble" TEXT="Low Level Master Control">
+<node CREATED="1757177178390" ID="31e25f33e3e0a5e6afd681213b21dadc" MODIFIED="1757177178390" STYLE="fork" TEXT="stm32f407vet6 as main controller"/>
+<node CREATED="1757177178390" ID="6f5e1aec5dfe781829a8eccfe326862f" MODIFIED="1757177178390" STYLE="fork" TEXT="TPS5430 steps down voltage to 3.3V"/>
+<node CREATED="1757177178390" ID="e33d0f7f7ba5cd203d0f7a1ebba8cc87" MODIFIED="1757177178390" STYLE="fork" TEXT="Test point: 3.3V output"/>
+<node CREATED="1757177178390" ID="3af5ddeb38e432fea4ee32e9e871380e" MODIFIED="1757177178390" STYLE="fork" TEXT="Micro Remote Control">
+<node CREATED="1757177178390" ID="2088d9c3c3bca18f30589e7b7e315657" MODIFIED="1757177178390" STYLE="fork" TEXT="TPS5430 steps down voltage to 5V"/>
+<node CREATED="1757177178390" ID="517facf7094c3962354f572c1107cfb2" MODIFIED="1757177178390" STYLE="fork" TEXT="Test point: 5V output"/>
+<node CREATED="1757177178390" ID="6d51268088e1d6e32970849eb743d1ed" MODIFIED="1757177178390" STYLE="fork" TEXT="SBUS inversion circuit"/>
+<node CREATED="1757177178390" ID="56e419011b4303603c31aed8bbf50e73" MODIFIED="1757177178390" STYLE="fork" TEXT="Input interface: 3V3 power, SBUS bus signal"/>
+<node CREATED="1757177178390" ID="a68360993a625897413f5e1f5372afff" MODIFIED="1757177178390" STYLE="fork" TEXT="Output interface: 5V power for receiver, inverted bus signal"/>
+</node>
+<node CREATED="1757177178390" ID="b8359a6c953439ea5ee77cbcd108ac93" MODIFIED="1757177178390" STYLE="fork" TEXT="External Flash">
+<node CREATED="1757177178390" ID="ce1ace9757d80971687fceb65449b622" MODIFIED="1757177178390" STYLE="fork" TEXT="W25Q16"/>
+<node CREATED="1757177178390" ID="42e3a7318756d680d6315043aa4aa073" MODIFIED="1757177178390" STYLE="fork" TEXT="SPI communication"/>
+</node>
+<node CREATED="1757177178390" ID="e8ef5193590b458c2eae2f0e734e526e" MODIFIED="1757177178390" STYLE="fork" TEXT="3V3 and 5V Communication Level Conversion">
+<node CREATED="1757177178390" ID="888124e89ea5836ac247fb41b6f02268" MODIFIED="1757177178390" STYLE="fork" TEXT="4x RS0104 3V3 to 5V, responsible for motor control signal conversion"/>
+<node CREATED="1757177178390" ID="ef4ab3c53546b38866916eacbfdf28f5" MODIFIED="1757177178390" STYLE="fork" TEXT="4x resistor voltage divider circuits to reduce 5V to below 3.3V, using ADC to collect motor speed signals"/>
+<node CREATED="1757177178390" ID="de9982bd8ab3f2598252e2bcd786be3d" MODIFIED="1757177178390" STYLE="fork" TEXT="Input interface: 3V3, 5V, various motor speed signals"/>
+<node CREATED="1757177178390" ID="7eae1f5129b385a0718aa243ed44e31a" MODIFIED="1757177178390" STYLE="fork" TEXT="Output interface: Various motor control signals"/>
+</node>
+<node CREATED="1757177178390" ID="ad58e522e29cf84fc92895f6d408119a" MODIFIED="1757177178390" STYLE="fork" TEXT="Interfaces: USART1, UART5, I2C1"/>
+<node CREATED="1757177178390" ID="f5d5c3a66bd2b539bfedba5dfa1a9a16" MODIFIED="1757177178390" STYLE="fork" TEXT="Output and input interfaces need to summarize the above interfaces"/>
+<node CREATED="1757177178390" ID="972e5c6cc938d7242db909f45626639c" MODIFIED="1757177178390" STYLE="fork" TEXT="Update Log">
+<node CREATED="1757177178390" ID="2bbaa9b8b659e3e11bfb707bb884c99c" MODIFIED="1757177178390" STYLE="fork" TEXT="v1.0.1"/>
+<node CREATED="1757177178390" ID="ab221ff5c16c7b3f67f8670abf55ea9c" MODIFIED="1757177178390" STYLE="fork" TEXT="v1.0.2">
+<node CREATED="1757177178390" ID="d7af16b6b0b5d8599e55380257b27cc2" MODIFIED="1757177178390" STYLE="fork" TEXT="Split into power board and control board, top layer still uses copper pour"/>
+</node>
+<node CREATED="1757177178390" ID="3ac9b20946460a773a68904204af611d" MODIFIED="1757177178390" STYLE="fork" TEXT="v1.0.3">
+<node CREATED="1757177178390" ID="330706f0095c4b32ba509f545abf01ec" MODIFIED="1757177178390" STYLE="fork" TEXT="Crystal oscillator circuit not working, selected 4-pin crystal, no copper pour on part of the top layer"/>
+<node CREATED="1757177178390" ID="3ae199c20209865d2f088ce48578ef15" MODIFIED="1757177178390" STYLE="fork" TEXT="BLDC3 top layer silkscreen label error"/>
+<node CREATED="1757177178390" ID="e56792f3408c79c814db862b21cc6449" MODIFIED="1757177178390" STYLE="fork" TEXT="SWD interface silkscreen marked on top layer"/>
+</node>
+<node CREATED="1757177178390" ID="b1d2c0c8ee48afe41c12c694ce61171b" MODIFIED="1757177178390" STYLE="fork" TEXT="v1.0.4">
+<node CREATED="1757177178390" ID="dd77ad60dbf9e31b21a0f0fc9f39cffe" MODIFIED="1757177178390" STYLE="fork" TEXT="RS0104 level conversion connected to NC pin, needs to be switched"/>
+<node CREATED="1757177178390" ID="2a5bf5d59b3fd22142ac37cfecac2199" MODIFIED="1757177178390" STYLE="fork" TEXT="Regarding FG, using ADC for collection, requires resistor divider to within 3.3V"/>
+<node CREATED="1757177178390" ID="8d1dd79b09b67d65eedf9590093c55f9" MODIFIED="1757177178390" STYLE="fork" TEXT="Remove SN74"/>
+</node>
+</node>
+</node>
+<node CREATED="1757177178390" ID="636f66ed18bc119f71875d263dc997a2" MODIFIED="1757177251353" POSITION="right" STYLE="bubble" TEXT="Vice Control">
+<node CREATED="1757177178390" ID="a5774d86e607782d1321cbaa5f24ef3a" MODIFIED="1757177284991" STYLE="fork" TEXT="esp32-wroom-32 as vice controller"/>
+<node CREATED="1757177178390" ID="ad001480f2985f3e8c515e29ff36c940" MODIFIED="1757177178390" STYLE="fork" TEXT="TPS5430 steps down voltage to 3.3V"/>
+<node CREATED="1757177178390" ID="591e75f364b5bc5daf9f766db8705e97" MODIFIED="1757177178390" STYLE="fork" TEXT="Test point: 3.3V output"/>
+<node CREATED="1757177178390" ID="603c412624d0f6b86d77ebb94c7d25f7" MODIFIED="1757177178390" STYLE="fork" TEXT="wifi/ble/bt control"/>
+<node CREATED="1757177178390" ID="97e00f536f870bf00cab5b5b8fc411f8" MODIFIED="1757177178390" STYLE="fork" TEXT="TFT Screen">
+<node CREATED="1757177178390" ID="204e2b15cf43be0a1aa46cc789defd91" MODIFIED="1757177178390" STYLE="fork" TEXT="TPS5430 steps down voltage to 5V"/>
+<node CREATED="1757177178390" ID="83415a82a539f52c21eabcc75de8706b" MODIFIED="1757177178390" STYLE="fork" TEXT="Test point: 5V output"/>
+<node CREATED="1757177178390" ID="563df4147784c7d7827f5e97b4baa448" MODIFIED="1757177178390" STYLE="fork" TEXT="Input interface: 5V power, SPI, I2C, reset signal"/>
+</node>
+<node CREATED="1757177178390" ID="db4ec582761d95e41257443ee03fafc2" MODIFIED="1757177178390" STYLE="fork" TEXT="Active Buzzer">
+<node CREATED="1757177178390" ID="4c7a791bdf7d335a8e207826a70d5d60" MODIFIED="1757177178390" STYLE="fork" TEXT="Input interface: 3V3, IO control pin"/>
+</node>
+<node CREATED="1757177178390" ID="e1b1274af512506a3a82c4f33cf1416a" MODIFIED="1757177178390" STYLE="fork" TEXT="Output interface: UART and other unused IO pins"/>
+<node CREATED="1757177178390" ID="693e7373f70ce5314a5f855831803b41" MODIFIED="1757177178390" STYLE="fork" TEXT="Update Log">
+<node CREATED="1757177178390" ID="d34063a9979144df0dcbd2667351b077" MODIFIED="1757177178390" STYLE="fork" TEXT="v1.0.4">
+<node CREATED="1757177178390" ID="747ea29bad56dcacc80e5aaad6cf71c8" MODIFIED="1757177178390" STYLE="fork" TEXT="Mounting holes connected to ground"/>
+<node CREATED="1757177178390" ID="82c11671611e9ac65620125ff69cddf1" MODIFIED="1757177178390" STYLE="fork" TEXT="DC jack installed backwards"/>
+</node>
+<node CREATED="1757177178390" ID="87470c0c0b6c0210e1dd88366414557a" MODIFIED="1757177178390" STYLE="fork" TEXT="v1.0.5"/>
+</node>
+</node>
+<node CREATED="1757177178390" ID="9f8d8bc126b8b6fb82bf69daa652d8b6" MODIFIED="1757177178390" POSITION="right" STYLE="bubble" TEXT="Power Supply Board">
+<node CREATED="1757177178390" ID="416d7e9f593826036c3926adab05c448" MODIFIED="1757177178390" STYLE="fork" TEXT="Input interface: XT-60 battery interface"/>
+<node CREATED="1757177178390" ID="9258b3ea1891010a1092de0f42041b78" MODIFIED="1757177178390" STYLE="fork" TEXT="Output interface: 7-channel battery voltage output interfaces"/>
+<node CREATED="1757177178390" ID="e84ac0d829018ad80c0d28560591e852" MODIFIED="1757177178390" STYLE="fork" TEXT="Update Log">
+<node CREATED="1757177178390" ID="63c755e53fb19ab4e62cb25a80a0a97e" MODIFIED="1757177178390" STYLE="fork" TEXT="v1.0.3">
+<node CREATED="1757177178390" ID="130b25074f1be6a2b785e706b6fd6d93" MODIFIED="1757177178390" STYLE="fork" TEXT="Total of 7 power output interfaces, supplying power to 7 boards"/>
+</node>
+<node CREATED="1757177178390" ID="2d52e687bdcff403b84b5af279734ef3" MODIFIED="1757177178390" STYLE="fork" TEXT="v1.0.4">
+<node CREATED="1757177178390" ID="0a3fa34583fbfba94b53b3517c5a926e" MODIFIED="1757177178390" STYLE="fork" TEXT="Added main power switch"/>
+</node>
+</node>
+</node>
+</node>
+</map>
