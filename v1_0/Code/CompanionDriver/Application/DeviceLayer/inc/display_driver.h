@@ -111,7 +111,7 @@ typedef struct
     sdspi_dev_handle_t sdcard_handle;  //SD card device handle
     sdspi_device_config_t sdcard_device_config; //SD card device configuration
     sdmmc_host_t sdcard_host; //SD card host configuration
-    sdmmc_card_t sdcard_card; //SD card information
+    sdmmc_card_t* sdcard_card; //SD card information
     char* mount_point;
     esp_vfs_fat_mount_config_t sdcard_mount_config;
     sdmmc_command_t sdcard_command; //SD card command structure

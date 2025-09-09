@@ -1,5 +1,4 @@
 #include "led_driver.h"
-#include "led_xdefine.h"
 #include <stdio.h>
 
 void LED_Init(led_config_t* led_config)
@@ -8,6 +7,7 @@ void LED_Init(led_config_t* led_config)
     led_config[ERROR_RED].led_gpio_config.pin_bit_mask = 1ULL << LED_ERROR_PIN;
     led_config[NORMAL_GREEN].led_gpio_config.pin_bit_mask = 1ULL << LED_NORMAL_PIN;
     led_config[SLEEP_BLUE].led_gpio_config.pin_bit_mask = 1ULL << LED_SLEEP_PIN;
+    led_config[BACKLIGHT].led_gpio_config.pin_bit_mask = 1ULL << LED_DISPLAY_BACKLIGHT_PIN;
     for(uint8_t i = 0; i < LED_TYPE_NUM; i++)
     {
         led_config[i].led_gpio_config.intr_type = GPIO_INTR_DISABLE;
@@ -21,6 +21,7 @@ void LED_Init(led_config_t* led_config)
     gpio_set_level(LED_ERROR_PIN, LED_OFF);
     gpio_set_level(LED_NORMAL_PIN, LED_OFF);
     gpio_set_level(LED_SLEEP_PIN, LED_OFF);
+    gpio_set_level(LED_DISPLAY_BACKLIGHT_PIN, LED_OFF);
 }
 
 void LED_SetLevel(led_type_e led_type, uint32_t level)
@@ -41,6 +42,10 @@ void LED_SetLevel(led_type_e led_type, uint32_t level)
 
         case SLEEP_BLUE:
         gpio_set_level(LED_SLEEP_PIN, level);
+        break;
+
+        case BACKLIGHT:
+        gpio_set_level(LED_DISPLAY_BACKLIGHT_PIN, level);
         break;
 
         default:

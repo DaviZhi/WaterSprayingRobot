@@ -48,6 +48,9 @@ void Display_Device_Init(display_config_t *display_config, display_device_e disp
         }
         case DISPLAY_DEVICE_SDCARD:
         {
+            sdmmc_host_t sdcard_host_temp = SDSPI_HOST_DEFAULT();
+            display_config->sdcard_config.sdcard_host = sdcard_host_temp;
+
             sdspi_device_config_t sdcard_config_temp = SDSPI_DEVICE_CONFIG_DEFAULT();
             display_config->sdcard_config.sdcard_device_config = sdcard_config_temp;
             display_config->sdcard_config.sdcard_device_config.host_id = SPI2_HOST;
@@ -60,14 +63,13 @@ void Display_Device_Init(display_config_t *display_config, display_device_e disp
             display_config->sdcard_config.sdcard_mount_config.max_files = 5;
             display_config->sdcard_config.mount_point = SDCARD_MOUNT_POINT;
 
-            sdmmc_card_t* card = &display_config->sdcard_config.sdcard_card;
             esp_vfs_fat_sdspi_mount(display_config->sdcard_config.mount_point,
                                     &display_config->sdcard_config.sdcard_host,
                                     &display_config->sdcard_config.sdcard_device_config,
                                     &display_config->sdcard_config.sdcard_mount_config,
-                                    &card);
+                                    &display_config->sdcard_config.sdcard_card);
             
-            sdmmc_card_print_info(stdout, &display_config->sdcard_config.sdcard_card);
+            sdmmc_card_print_info(stdout, display_config->sdcard_config.sdcard_card);
             break;
         }
         case DISPLAY_DEVICE_NONE:

@@ -2,6 +2,7 @@
 #define LED_DRIVER_H
 
 #include "driver/gpio.h"
+#include "led_xdefine.h"
 
 typedef enum
 {
@@ -9,6 +10,7 @@ typedef enum
     ERROR_RED,
     WARNNING_YELLOW,
     SLEEP_BLUE,
+    BACKLIGHT,
     LED_TYPE_NUM,
 }led_type_e;
 
