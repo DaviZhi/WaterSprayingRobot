@@ -1,7 +1,7 @@
 lowleveldriver\freertos.o: ../Core/Src/freertos.c
 lowleveldriver\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lowleveldriver\freertos.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-lowleveldriver\freertos.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lowleveldriver\freertos.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stddef.h
+lowleveldriver\freertos.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stdint.h
 lowleveldriver\freertos.o: ../Core/Inc/FreeRTOSConfig.h
 lowleveldriver\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 lowleveldriver\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
@@ -52,5 +52,5 @@ lowleveldriver\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/ti
 lowleveldriver\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 lowleveldriver\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 lowleveldriver\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
-lowleveldriver\freertos.o: ..\Application\TaskLayer\inc\test_task.h
+lowleveldriver\freertos.o: ../Application/TaskLayer/inc/test_task.h
 lowleveldriver\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h

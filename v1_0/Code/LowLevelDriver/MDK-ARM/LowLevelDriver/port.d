@@ -1,7 +1,7 @@
 lowleveldriver\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
 lowleveldriver\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lowleveldriver\port.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-lowleveldriver\port.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lowleveldriver\port.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stddef.h
+lowleveldriver\port.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stdint.h
 lowleveldriver\port.o: ../Core/Inc/FreeRTOSConfig.h
 lowleveldriver\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 lowleveldriver\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

@@ -1,8 +1,8 @@
 lowleveldriver\test_task.o: ..\Application\TaskLayer\src\test_task.c
-lowleveldriver\test_task.o: ..\Application\TaskLayer\inc\test_task.h
+lowleveldriver\test_task.o: ../Application/TaskLayer/inc/test_task.h
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lowleveldriver\test_task.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stddef.h
+lowleveldriver\test_task.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stdint.h
 lowleveldriver\test_task.o: ../Core/Inc/FreeRTOSConfig.h
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
@@ -16,7 +16,7 @@ lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/t
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
-lowleveldriver\test_task.o: ..\Application\DeviceLayer\inc\bldc_driver.h
+lowleveldriver\test_task.o: ../Application/DeviceLayer/inc/bldc_driver.h
 lowleveldriver\test_task.o: ../Core/Inc/tim.h
 lowleveldriver\test_task.o: ../Core/Inc/main.h
 lowleveldriver\test_task.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
@@ -57,9 +57,9 @@ lowleveldriver\test_task.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ti
 lowleveldriver\test_task.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 lowleveldriver\test_task.o: ../Core/Inc/gpio.h
 lowleveldriver\test_task.o: ../Core/Inc/adc.h
-lowleveldriver\test_task.o: ..\Application\SystemLayer\inc\dev.h
-lowleveldriver\test_task.o: ..\Application\DeviceLayer\inc\rmt_driver.h
+lowleveldriver\test_task.o: ../Application/SystemLayer/inc/dev.h
+lowleveldriver\test_task.o: ../Application/DeviceLayer/inc/rmt_driver.h
 lowleveldriver\test_task.o: ../Core/Inc/usart.h
-lowleveldriver\test_task.o: ..\Application\AlgorithmLayer\inc\filter.h
-lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+lowleveldriver\test_task.o: ../Application/AlgorithmLayer/inc/filter.h
+lowleveldriver\test_task.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stdlib.h
+lowleveldriver\test_task.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\math.h

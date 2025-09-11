@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp.sp
+--cpu=Cortex-M4.fp
 "lowleveldriver\startup_stm32f407xx.o"
 "lowleveldriver\main.o"
 "lowleveldriver\gpio.o"

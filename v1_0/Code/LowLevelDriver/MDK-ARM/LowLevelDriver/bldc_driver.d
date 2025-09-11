@@ -1,5 +1,5 @@
 lowleveldriver\bldc_driver.o: ..\Application\DeviceLayer\src\bldc_driver.c
-lowleveldriver\bldc_driver.o: ..\Application\DeviceLayer\inc\bldc_driver.h
+lowleveldriver\bldc_driver.o: ../Application/DeviceLayer/inc/bldc_driver.h
 lowleveldriver\bldc_driver.o: ../Core/Inc/tim.h
 lowleveldriver\bldc_driver.o: ../Core/Inc/main.h
 lowleveldriver\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
@@ -9,7 +9,7 @@ lowleveldriver\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_
 lowleveldriver\bldc_driver.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 lowleveldriver\bldc_driver.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 lowleveldriver\bldc_driver.o: ../Drivers/CMSIS/Include/core_cm4.h
-lowleveldriver\bldc_driver.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lowleveldriver\bldc_driver.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stdint.h
 lowleveldriver\bldc_driver.o: ../Drivers/CMSIS/Include/cmsis_version.h
 lowleveldriver\bldc_driver.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 lowleveldriver\bldc_driver.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -17,7 +17,7 @@ lowleveldriver\bldc_driver.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 lowleveldriver\bldc_driver.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 lowleveldriver\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 lowleveldriver\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-lowleveldriver\bldc_driver.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lowleveldriver\bldc_driver.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stddef.h
 lowleveldriver\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 lowleveldriver\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 lowleveldriver\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
@@ -42,8 +42,8 @@ lowleveldriver\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_
 lowleveldriver\bldc_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 lowleveldriver\bldc_driver.o: ../Core/Inc/gpio.h
 lowleveldriver\bldc_driver.o: ../Core/Inc/adc.h
-lowleveldriver\bldc_driver.o: ..\Application\SystemLayer\inc\dev.h
-lowleveldriver\bldc_driver.o: ..\Application\DeviceLayer\inc\bldc_xdefine.h
+lowleveldriver\bldc_driver.o: ../Application/SystemLayer/inc/dev.h
+lowleveldriver\bldc_driver.o: ../Application/DeviceLayer/inc/bldc_xdefine.h
 lowleveldriver\bldc_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 lowleveldriver\bldc_driver.o: ../Core/Inc/FreeRTOSConfig.h
 lowleveldriver\bldc_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h

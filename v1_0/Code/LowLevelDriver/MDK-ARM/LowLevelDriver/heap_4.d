@@ -1,8 +1,8 @@
 lowleveldriver\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
-lowleveldriver\heap_4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+lowleveldriver\heap_4.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stdlib.h
 lowleveldriver\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lowleveldriver\heap_4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-lowleveldriver\heap_4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lowleveldriver\heap_4.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stddef.h
+lowleveldriver\heap_4.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stdint.h
 lowleveldriver\heap_4.o: ../Core/Inc/FreeRTOSConfig.h
 lowleveldriver\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 lowleveldriver\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
