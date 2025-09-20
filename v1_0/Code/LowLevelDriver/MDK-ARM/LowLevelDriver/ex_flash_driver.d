@@ -1,5 +1,5 @@
 lowleveldriver\ex_flash_driver.o: ..\Application\DeviceLayer\src\ex_flash_driver.c
-lowleveldriver\ex_flash_driver.o: ..\Application\DeviceLayer\inc\ex_flash_driver.h
+lowleveldriver\ex_flash_driver.o: ../Application/DeviceLayer/inc/ex_flash_driver.h
 lowleveldriver\ex_flash_driver.o: ../Core/Inc/spi.h
 lowleveldriver\ex_flash_driver.o: ../Core/Inc/main.h
 lowleveldriver\ex_flash_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
@@ -9,7 +9,7 @@ lowleveldriver\ex_flash_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_
 lowleveldriver\ex_flash_driver.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 lowleveldriver\ex_flash_driver.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 lowleveldriver\ex_flash_driver.o: ../Drivers/CMSIS/Include/core_cm4.h
-lowleveldriver\ex_flash_driver.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lowleveldriver\ex_flash_driver.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stdint.h
 lowleveldriver\ex_flash_driver.o: ../Drivers/CMSIS/Include/cmsis_version.h
 lowleveldriver\ex_flash_driver.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 lowleveldriver\ex_flash_driver.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -17,7 +17,7 @@ lowleveldriver\ex_flash_driver.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 lowleveldriver\ex_flash_driver.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 lowleveldriver\ex_flash_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 lowleveldriver\ex_flash_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-lowleveldriver\ex_flash_driver.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lowleveldriver\ex_flash_driver.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stddef.h
 lowleveldriver\ex_flash_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 lowleveldriver\ex_flash_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 lowleveldriver\ex_flash_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
