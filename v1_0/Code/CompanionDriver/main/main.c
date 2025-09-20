@@ -12,8 +12,8 @@
 #include "soc/rtc_cntl_reg.h"
 #include "soc/rtc.h"
 
-//#define DEBUG_LED_DRIVER
-#define DEBUG_DISPLAY_DRIVER
+#define DEBUG_LED_DRIVER
+//#define DEBUG_DISPLAY_DRIVER
 
 uint8_t Buffer[4] = {0xAA, 0xBB, 0xCC, 0xDD};
 
