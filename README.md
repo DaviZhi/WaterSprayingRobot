@@ -49,3 +49,6 @@
 >> **RevisionLog** 
 >>
 >> Summarize the correction of errors, update a certain section, or add any new features.
+
+## License
+MIT License.
