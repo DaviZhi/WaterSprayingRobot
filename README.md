@@ -1,5 +1,7 @@
 # Water Spraying Robot: BigZ
 
+![picture](https://imgtolink.com/0bb5aa "BigZ")
+
 ## Introduce
 - **What is this project** 
 
