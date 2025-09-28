@@ -64,4 +64,4 @@ v1_0	// Current version.
 
 ## License
 
-MIT License.
+This project is under [MIT License](https://github.com/DaviZhi/WaterSprayingRobot?tab=MIT-1-ov-file).
