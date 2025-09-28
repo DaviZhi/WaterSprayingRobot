@@ -13,10 +13,10 @@
 
 ## Development Environment
 - **Software**  
-  - **SOLIDWORKS 2024** for mechanical structure
-  - **jlc EDA(EasyEDA)** for PCB design
-  - **Keil uVision 5+STM32CubeMX** for coding lowest level driver
-  - **vscode+ESP-IDF** for coding addtional level driver
+  - [**SOLIDWORKS 2024**][Free Downloads | SOLIDWORKS](https://www.solidworks.com/support/free-downloads/ "download link") for mechanical structure
+  - [**jlc EDA**][软件下载 - 嘉立创EDA](https://lceda.cn/page/download "download link")**([EasyEDA]**(https://easyeda.com/page/download "download link")) for PCB design
+  - [**Keil uVision 5**][Keil Product Downloads](https://www.keil.com/download/product/ "download link") + [**STM32CubeMX**][STM32CubeMX | Software - STMicroelectronics](https://www.st.com/en/development-tools/stm32cubemx.html "download link") for coding lowest level driver
+  - [**vscode**][Download Visual Studio Code - Mac, Linux, Windows](https://code.visualstudio.com/Download "download link") + [**ESP-IDF**][Get Started - ESP32 - — ESP-IDF Programming Guide v5.5.1 documentation](https://docs.espressif.com/projects/esp-idf/en/v5.5.1/esp32/get-started/index.html# "get started") for coding addtional level driver
 - **Hardware**
   - **STM32F407** as lowest level
   - **ESP32-WROOM-32** as additional level
