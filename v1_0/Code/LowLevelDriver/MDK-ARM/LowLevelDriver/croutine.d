@@ -1,7 +1,7 @@
 lowleveldriver\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
 lowleveldriver\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lowleveldriver\croutine.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stddef.h
-lowleveldriver\croutine.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stdint.h
+lowleveldriver\croutine.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lowleveldriver\croutine.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 lowleveldriver\croutine.o: ../Core/Inc/FreeRTOSConfig.h
 lowleveldriver\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 lowleveldriver\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

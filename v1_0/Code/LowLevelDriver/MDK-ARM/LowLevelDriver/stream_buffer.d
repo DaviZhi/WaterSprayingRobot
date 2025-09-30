@@ -1,8 +1,8 @@
 lowleveldriver\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
-lowleveldriver\stream_buffer.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stdint.h
-lowleveldriver\stream_buffer.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\string.h
+lowleveldriver\stream_buffer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lowleveldriver\stream_buffer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 lowleveldriver\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lowleveldriver\stream_buffer.o: D:\Soft\Keil5 MDK\ARM\ARMCC\Bin\..\include\stddef.h
+lowleveldriver\stream_buffer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 lowleveldriver\stream_buffer.o: ../Core/Inc/FreeRTOSConfig.h
 lowleveldriver\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 lowleveldriver\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
