@@ -20,24 +20,24 @@ void Task1(void* argument)
 //	BLDC_Stop(LF);
 //	BLDC_Stop(LB);
 //	BLDC_Stop(RB);
-	BLDC_xQueueCreate();
+//	BLDC_xQueueCreate();
 
 	for(;;)
 	{
-		BLDC_SpeedSend();
-		BLDC_SpeedReceive(BLDC_Set);
+//		BLDC_SpeedSend();
+//		BLDC_SpeedReceive(BLDC_Set);
 		
 		osDelay(1);
 	}
 }
 
-//void StartDefaultTask(void const * argument)
-//{
-//	
-//	for(;;)
-//	{
-////		Remote_ChannelGet(&Rmt_Info);
-//		Remote_ChannelOneToFour_Handler(&Rmt_Info);
-//		osDelay(1);
-//	}
-//}
+void StartDefaultTask(void* argument)
+{
+	Remote_Init(&Rmt_Info);
+	for(;;)
+	{
+		Remote_GetChannel(&Rmt_Info);
+		Remote_ChannelOneToFour_Handler(&Rmt_Info);
+		osDelay(1);
+	}
+}

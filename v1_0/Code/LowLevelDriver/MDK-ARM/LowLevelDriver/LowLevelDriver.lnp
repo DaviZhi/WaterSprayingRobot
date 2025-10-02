@@ -43,6 +43,7 @@
 "lowleveldriver\rmt_driver.o"
 "lowleveldriver\stpr_driver.o"
 "lowleveldriver\filter.o"
+"lowleveldriver\bigz_chassis.o"
 "lowleveldriver\test_task.o"
 "lowleveldriver\croutine.o"
 "lowleveldriver\event_groups.o"

@@ -2,7 +2,15 @@
 #include "rmt_xdefine.h"
 #include "dev.h"
 
-uint16_t Remote0,Remote2,Remote1,Remote3;	//test param
+void Remote_Init(rmt_info_t* rmt_info)
+{
+	Remote_GetChannel(rmt_info);
+	
+	for(uint8_t i = 0; i < 4; i++)
+	{
+		rmt_info->rmt_filter_info[i].prev_value = 1000;
+	}
+}
 
 /**	
  * @brief Receive data from receiver and convert them into channel value, every 11 bit data compose a channel.
@@ -27,12 +35,6 @@ void Remote_GetChannel(rmt_info_t* rmt_info)
 		rmt_info->sbus_channel_ori[5] = (rmt_info->sbus_data[7] >> 7 | (rmt_info->sbus_data[8] << 1) | 
 		(rmt_info->sbus_data[9] << 9)) & 0x07FF;
 	}
-	
-	//debug
-//	Remote2 = rmt_info->sbus_channel[2];
-//	Remote0 = rmt_info->sbus_channel[0];
-//	Remote1 = rmt_info->sbus_channel[1];
-//	Remote3 = rmt_info->sbus_channel[3];
 }
 
 /**	
@@ -47,19 +49,11 @@ void Remote_GetChannel(rmt_info_t* rmt_info)
  */
 void Remote_ChannelOneToFour_Handler(rmt_info_t* rmt_info)
 {
-	static const uint16_t threshold = REMOTE_THRESHOLD;
-	static const float alpha = 0.8f;
+	static const float alpha = 0.04f;
 	
 	for(uint8_t i = 0; i < 4; i++)
 	{
 		rmt_info->sbus_channel[i] = Filter_LowPass(&rmt_info->rmt_filter_info[i], 
-		(float)Filter_Limiting(&rmt_info->rmt_filter_info[i], (float)rmt_info->sbus_channel_ori[i], 
-			(float)threshold), alpha);
+												   (float)rmt_info->sbus_channel_ori[i], alpha);
 	}
-	
-	//debug
-	Remote2 = rmt_info->sbus_channel[2];
-	Remote0 = rmt_info->sbus_channel[0];
-	Remote1 = rmt_info->sbus_channel[1];
-	Remote3 = rmt_info->sbus_channel[3];
 }

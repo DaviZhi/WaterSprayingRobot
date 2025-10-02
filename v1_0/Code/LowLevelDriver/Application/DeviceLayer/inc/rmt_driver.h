@@ -18,6 +18,7 @@ typedef struct
 }rmt_info_t;
 
 /* Remote_Exported function------------------------------------------------------*/
+void Remote_Init(rmt_info_t* rmt_info);
 void Remote_GetChannel(rmt_info_t* rmt_info);
 void Remote_ChannelOneToFour_Handler(rmt_info_t* rmt_info);
 

@@ -54,7 +54,7 @@ osThreadId defaultTaskHandle;
 
 /* USER CODE END FunctionPrototypes */
 
-void StartDefaultTask(void const * argument);
+//void StartDefaultTask(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -102,12 +102,13 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
-  defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+//  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+//  defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
-  xTaskCreate(Task1, "TestTask", 128, NULL, 0, NULL);
+  xTaskCreate(Task1, "TestTask1", 128, NULL, 0, NULL);
+  xTaskCreate(StartDefaultTask, "TestTask2", 128, NULL, 0, NULL);
   /* USER CODE END RTOS_THREADS */
 
 }
@@ -119,16 +120,16 @@ void MX_FREERTOS_Init(void) {
   * @retval None
   */
 /* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void const * argument)
-{
-  /* USER CODE BEGIN StartDefaultTask */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END StartDefaultTask */
-}
+//void StartDefaultTask(void const * argument)
+//{
+//  /* USER CODE BEGIN StartDefaultTask */
+//  /* Infinite loop */
+//  for(;;)
+//  {
+//    osDelay(1);
+//  }
+//  /* USER CODE END StartDefaultTask */
+//}
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
