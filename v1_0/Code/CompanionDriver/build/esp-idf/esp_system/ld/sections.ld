@@ -1,6 +1,6 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: E:\WaterSprayingRobot\v1_0\Code\CompanionDriver\build\esp-idf\esp_system\ld\sections.ld.in */
+/* Generated from: G:\BigZ\v1_0\Code\CompanionDriver\build\esp-idf\esp_system\ld\sections.ld.in */
 
 /*
 

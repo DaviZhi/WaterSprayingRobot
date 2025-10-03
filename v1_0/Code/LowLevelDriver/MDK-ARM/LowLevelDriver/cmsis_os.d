@@ -1,9 +1,9 @@
 lowleveldriver\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
-lowleveldriver\cmsis_os.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+lowleveldriver\cmsis_os.o: E:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\string.h
 lowleveldriver\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 lowleveldriver\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lowleveldriver\cmsis_os.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-lowleveldriver\cmsis_os.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lowleveldriver\cmsis_os.o: E:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stddef.h
+lowleveldriver\cmsis_os.o: E:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdint.h
 lowleveldriver\cmsis_os.o: ../Core/Inc/FreeRTOSConfig.h
 lowleveldriver\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 lowleveldriver\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

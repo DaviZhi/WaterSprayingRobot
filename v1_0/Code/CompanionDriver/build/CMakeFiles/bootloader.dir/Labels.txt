@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/CMakeFiles/bootloader
-E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/CMakeFiles/bootloader.rule
-E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/CMakeFiles/bootloader-complete.rule
-E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+G:/BigZ/v1_0/Code/CompanionDriver/build/CMakeFiles/bootloader
+G:/BigZ/v1_0/Code/CompanionDriver/build/CMakeFiles/bootloader.rule
+G:/BigZ/v1_0/Code/CompanionDriver/build/CMakeFiles/bootloader-complete.rule
+G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

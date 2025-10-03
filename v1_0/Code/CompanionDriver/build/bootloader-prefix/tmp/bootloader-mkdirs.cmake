@@ -5,18 +5,18 @@ cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
   "E:/Espressif/frameworks/esp-idf-v5.3.1/components/bootloader/subproject"
-  "E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader"
-  "E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader-prefix"
-  "E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader-prefix/tmp"
-  "E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp"
-  "E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader-prefix/src"
-  "E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp"
+  "G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader"
+  "G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader-prefix"
+  "G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader-prefix/tmp"
+  "G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp"
+  "G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader-prefix/src"
+  "G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "G:/BigZ/v1_0/Code/CompanionDriver/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

@@ -9,7 +9,5 @@
   "idf.toolsPathWin": "E:\\Espressif",
   "idf.customExtraVars": {
     "IDF_TARGET": "esp32"
-  },
-  "idf.flashType": "UART",
-  "idf.portWin": "COM13"
+  }
 }

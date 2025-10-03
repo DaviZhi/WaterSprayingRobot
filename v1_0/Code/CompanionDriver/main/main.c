@@ -17,19 +17,6 @@
 
 uint8_t Buffer[4] = {0xAA, 0xBB, 0xCC, 0xDD};
 
-void power_on_self_check()
-{
-    soc_reset_reason_t reason = esp_rom_get_reset_reason(0);   // CPU0
-//    ESP_LOGI(TAG, "Reset reason: %d", reason);
-
-    /* 第一次上电复位后，主动再软重启一次，让 BootROM 重新采样 strapping */
-//    if (reason == RESET_REASON_CHIP_POWER_ON) {
-//        ESP_LOGI(TAG, "First power-on, reboot once...");
-//        esp_restart();          // 立即软重启
-//    }
-    /* 其余复位原因（SW、WDT、DEEPSLEEP 等）直接往下走 */
-}
-
 void app_main(void)
 {
     #ifdef DEBUG_DISPLAY_DRIVER

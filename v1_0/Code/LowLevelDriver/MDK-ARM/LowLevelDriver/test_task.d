@@ -1,8 +1,8 @@
 lowleveldriver\test_task.o: ..\Application\TaskLayer\src\test_task.c
 lowleveldriver\test_task.o: ../Application/TaskLayer/inc/test_task.h
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stddef.h
+lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdint.h
 lowleveldriver\test_task.o: ../Core/Inc/FreeRTOSConfig.h
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
@@ -61,5 +61,5 @@ lowleveldriver\test_task.o: ../Application/SystemLayer/inc/dev.h
 lowleveldriver\test_task.o: ../Application/DeviceLayer/inc/rmt_driver.h
 lowleveldriver\test_task.o: ../Core/Inc/usart.h
 lowleveldriver\test_task.o: ../Application/AlgorithmLayer/inc/filter.h
-lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdlib.h
+lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\math.h

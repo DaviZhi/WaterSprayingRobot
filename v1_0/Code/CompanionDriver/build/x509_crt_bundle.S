@@ -1,4 +1,4 @@
-/* * Data converted from E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from G:/BigZ/v1_0/Code/CompanionDriver/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)

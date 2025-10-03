@@ -1,4 +1,4 @@
-# Install script for directory: E:/WaterSprayingRobot/v1_0/Code/CompanionDriver/Application/Version
+# Install script for directory: G:/BigZ/v1_0/Code/CompanionDriver/Application/Version
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
