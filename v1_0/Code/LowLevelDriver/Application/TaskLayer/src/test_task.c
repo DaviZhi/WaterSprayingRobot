@@ -16,6 +16,7 @@ void Task1(void* argument)
 void StartDefaultTask(void* argument)
 {
 	Remote_Init(&Rmt_Info);
+	
 	for(;;)
 	{
 		Remote_GetChannel(&Rmt_Info);
