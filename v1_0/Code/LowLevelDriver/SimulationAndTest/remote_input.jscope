@@ -4,15 +4,15 @@
     <Project>
         <Configuration>
             <JLink>
-                <Options Connection="1" IsRTTSession="0" IsRTTWithTimeStamp="1" SamplingPeriod="100" SerialNo="0" JTAG_IRPre="-1" JTAG_DRPre="-1" IP="localhost" TargetDevice="Cortex-M4" TargetInterface="SWD" InterfaceSpeed="4000" />
+                <Options Connection="1" IsRTTSession="0" IsRTTWithTimeStamp="1" IsRTTPlus="0" SamplingPeriod="100" SerialNo="0" JTAG_IRPre="-1" JTAG_DRPre="-1" IP="" TargetDevice="Cortex-M4" TargetInterface="SWD" InterfaceSpeed="10" />
             </JLink>
-            <ScriptFile Name="unspecified" />
-            <ElfFile Name="E:\WaterSprayingRobot\v1_0\Code\LowLevelDriver_v1_0_4\MDK-ARM\LowLevelDriver_v1_0_4\LowLevelDriver_v1_0_4.axf" />
-            <DataFile Name="" />
-            <RawFile Name="" />
+            <ElfFile Name="G:\BigZ\v1_0\Code\LowLevelDriver\MDK-ARM\LowLevelDriver\LowLevelDriver.axf" />
             <Scope>
                 <Options TimeResolutionUs="100000" />
             </Scope>
+            <Trigger>
+                <Options Level="0" Symbol="Remote_Ori" On="0" Auto="0" Rise="0" Fall="0" />
+            </Trigger>
         </Configuration>
         <Windows>
             <Graph Show="1" />
@@ -20,7 +20,10 @@
         </Windows>
         <SelectedSymbols>
             <Symbol>
-                <Options Name="Remote2" Address="0x2000002A" Type="ushort" TypeID="7" Size="2" GraphColorRed="255" GraphColorGreen="215" GraphColorBlue="0" YMinSampled="4" YMaxSampled="2036" YAvgSampled="1109" Offset="4" ShowInGraph="1" ACCoupling="0" YOffset="200" IsAutoConfig="0" YResolution="500" MaxValue="16680" File="..\Application\DeviceLayer\src\rmt_driver.c" Scope="0" DrawStyle="0" />
+                <Options Name="Remote_Ori" Address="0x20000012" Type="unsigned short" TypeID="7" Size="2" GraphColorRed="255" GraphColorGreen="0" GraphColorBlue="0" YMinSampled="200" YMaxSampled="1800" YAvgSampled="989.774" Offset="4" ShowInGraph="1" YOffset="0" IsAutoConfig="0" YResolution="500" MaxValue="65535" File="G:\BigZ\v1_0\Code\LowLevelDriver\MDK-ARM/..\Application\DeviceLayer\src\rmt_driver.c" DrawStyle="0" NameWithParents=".Remote_Ori" />
+            </Symbol>
+            <Symbol>
+                <Options Name="Remote" Address="0x20000010" Type="unsigned short" TypeID="7" Size="2" GraphColorRed="0" GraphColorGreen="0" GraphColorBlue="255" YMinSampled="200" YMaxSampled="1799" YAvgSampled="987.669" Offset="6" ShowInGraph="1" YOffset="0" IsAutoConfig="0" YResolution="500" MaxValue="65535" File="G:\BigZ\v1_0\Code\LowLevelDriver\MDK-ARM/..\Application\DeviceLayer\src\rmt_driver.c" DrawStyle="0" NameWithParents=".Remote" />
             </Symbol>
         </SelectedSymbols>
     </Project>

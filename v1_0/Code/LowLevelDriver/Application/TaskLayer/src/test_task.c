@@ -9,18 +9,18 @@ void Task1(void* argument)
 {
 	for(;;)
 	{	
-		osDelay(1);
+		vTaskDelay(pdMS_TO_TICKS(10));
 	}
 }
 
-void StartDefaultTask(void* argument)
+void RemoteTask(void* argument)
 {
 	Remote_Init(&Rmt_Info);
 	
 	for(;;)
 	{
-		Remote_GetChannel(&Rmt_Info);
+		Remote_ChannelGet(&Rmt_Info);
 		Remote_ChannelOneToFour_Handler(&Rmt_Info);
-		osDelay(1);
+		vTaskDelay(pdMS_TO_TICKS(10));
 	}
 }

@@ -5,7 +5,7 @@
 #include "task.h"
 #include "cmsis_os.h"
 
-void StartDefaultTask(void* argument);
+void RemoteTask(void* argument);
 void Task1(void* argument);
 
 #endif

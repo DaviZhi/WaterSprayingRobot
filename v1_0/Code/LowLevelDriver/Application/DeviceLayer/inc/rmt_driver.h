@@ -2,9 +2,9 @@
 #define RMT_DRIVER_H
 
 #include "usart.h"
-
 #include "filter.h"
 #include "dev.h"
+#include "rmt_xdefine.h"
 
 /* Private struct----------*/
 typedef struct
@@ -19,7 +19,7 @@ typedef struct
 
 /* Remote_Exported function------------------------------------------------------*/
 void Remote_Init(rmt_info_t* rmt_info);
-void Remote_GetChannel(rmt_info_t* rmt_info);
+void Remote_ChannelGet(rmt_info_t* rmt_info);
 void Remote_ChannelOneToFour_Handler(rmt_info_t* rmt_info);
 
 #endif

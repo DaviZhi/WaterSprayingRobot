@@ -710,14 +710,14 @@
           <GroupName>App/Module</GroupName>
           <Files>
             <File>
-              <FileName>bigz_chassis.c</FileName>
+              <FileName>chassis.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Application\ModuleLayer\src\bigz_chassis.c</FilePath>
+              <FilePath>..\Application\ModuleLayer\src\chassis.c</FilePath>
             </File>
             <File>
-              <FileName>bigz_chassis.h</FileName>
+              <FileName>chassis.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Application\ModuleLayer\inc\bigz_chassis.h</FilePath>
+              <FilePath>..\Application\ModuleLayer\inc\chassis.h</FilePath>
             </File>
           </Files>
         </Group>

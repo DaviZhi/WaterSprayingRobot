@@ -63,3 +63,4 @@ lowleveldriver\test_task.o: ../Core/Inc/usart.h
 lowleveldriver\test_task.o: ../Application/AlgorithmLayer/inc/filter.h
 lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdlib.h
 lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\math.h
+lowleveldriver\test_task.o: ../Application/DeviceLayer/inc/rmt_xdefine.h
