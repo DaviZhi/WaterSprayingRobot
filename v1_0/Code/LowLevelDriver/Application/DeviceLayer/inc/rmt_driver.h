@@ -20,6 +20,6 @@ typedef struct
 /* Remote_Exported function------------------------------------------------------*/
 void Remote_Init(rmt_info_t* rmt_info);
 void Remote_ChannelGet(rmt_info_t* rmt_info);
-void Remote_ChannelOneToFour_Handler(rmt_info_t* rmt_info);
+void Remote_ChannelHandler(rmt_info_t* rmt_info);
 
 #endif

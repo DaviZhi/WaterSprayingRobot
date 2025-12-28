@@ -11,9 +11,9 @@ lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
-lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 lowleveldriver\test_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 lowleveldriver\test_task.o: ../Application/DeviceLayer/inc/bldc_driver.h
@@ -64,3 +64,5 @@ lowleveldriver\test_task.o: ../Application/AlgorithmLayer/inc/filter.h
 lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdlib.h
 lowleveldriver\test_task.o: E:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\math.h
 lowleveldriver\test_task.o: ../Application/DeviceLayer/inc/rmt_xdefine.h
+lowleveldriver\test_task.o: ../Application/ModuleLayer/inc/chassis.h
+lowleveldriver\test_task.o: ../Application/DeviceLayer/inc/bldc_xdefine.h

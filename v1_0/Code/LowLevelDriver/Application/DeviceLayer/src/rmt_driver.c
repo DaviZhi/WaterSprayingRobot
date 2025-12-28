@@ -50,7 +50,7 @@ void Remote_ChannelGet(rmt_info_t* rmt_info)
 		rmt_info->sbus_channel_ori[5] = (rmt_info->sbus_data[7] >> 7 | (rmt_info->sbus_data[8] << 1) | 
 		(rmt_info->sbus_data[9] << 9)) & 0x07FF;
 		
-		Remote_Ori = rmt_info->sbus_channel_ori[3];	//debug
+//		Remote_Ori = rmt_info->sbus_channel_ori[3];	//debug
 	}
 }
 
@@ -64,7 +64,7 @@ void Remote_ChannelGet(rmt_info_t* rmt_info)
  * |               |                  |              |
  *  ---------------                    --------------
  */
-void Remote_ChannelOneToFour_Handler(rmt_info_t* rmt_info)
+void Remote_ChannelHandler(rmt_info_t* rmt_info)
 {
 	static const float alpha = 0.04f;
 	
@@ -73,5 +73,7 @@ void Remote_ChannelOneToFour_Handler(rmt_info_t* rmt_info)
 		rmt_info->sbus_channel[i] = Filter_LowPass(&rmt_info->rmt_filter_info[i], 
 												   (float)rmt_info->sbus_channel_ori[i], alpha);
 	}
-	Remote = rmt_info->sbus_channel[3];
+	rmt_info->sbus_channel[4] = rmt_info->sbus_channel_ori[4];
+	rmt_info->sbus_channel[5] = rmt_info->sbus_channel_ori[5];
+//	Remote = rmt_info->sbus_channel[3];	//debug
 }

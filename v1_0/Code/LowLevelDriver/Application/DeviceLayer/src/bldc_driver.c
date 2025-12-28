@@ -140,28 +140,28 @@ void BLDC_RevoSet(bldc_set_t* bldc_set, bldc_num_e bldc_num, GPIO_PinState rev_s
 		case LF:
 		{
 			bldc_set[LF].revo_set = rev_set;
-			HAL_GPIO_WritePin(BLDC3_BRA_GPIO_Port, BLDC3_BRA_Pin, bldc_set[LF].revo_set);
+			HAL_GPIO_WritePin(BLDC3_REV_GPIO_Port, BLDC3_REV_Pin, bldc_set[LF].revo_set);
 			bldc_set[LF].bldc_status = DEV_OK;
 			break;
 		}
 		case RF:
 		{
 			bldc_set[RF].revo_set = rev_set;
-			HAL_GPIO_WritePin(BLDC1_BRA_GPIO_Port, BLDC1_BRA_Pin, bldc_set[RF].revo_set);
+			HAL_GPIO_WritePin(BLDC1_REV_GPIO_Port, BLDC1_REV_Pin, bldc_set[RF].revo_set);
 			bldc_set[RF].bldc_status = DEV_OK;
 			break;
 		}
 		case LB:
 		{
 			bldc_set[LB].revo_set = rev_set;
-			HAL_GPIO_WritePin(BLDC2_BRA_GPIO_Port, BLDC2_BRA_Pin, bldc_set[LB].revo_set);
+			HAL_GPIO_WritePin(BLDC2_REV_GPIO_Port, BLDC2_REV_Pin, bldc_set[LB].revo_set);
 			bldc_set[LB].bldc_status = DEV_OK;
 			break;
 		}
 		case RB:
 		{
 			bldc_set[RB].revo_set = rev_set;
-			HAL_GPIO_WritePin(BLDC4_BRA_GPIO_Port, BLDC4_BRA_Pin, bldc_set[RB].revo_set);
+			HAL_GPIO_WritePin(BLDC4_REV_GPIO_Port, BLDC4_REV_Pin, bldc_set[RB].revo_set);
 			bldc_set[RB].bldc_status = DEV_OK;
 			break;
 		}
