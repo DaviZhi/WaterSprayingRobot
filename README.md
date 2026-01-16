@@ -1,6 +1,6 @@
 # Water Spraying Robot: BigZ
 
-![picture](https://github.com/DaviZhi/picx-images-hosting/raw/master/image.1lc73aek0t.webp "BigZ")
+![chassis img](https://www.imgur.la/images/2026/01/17/chassis_img.webp)
 
 ## Introduce
 - **What is this project about**
@@ -24,7 +24,6 @@
 ## Project Structure
 
 ````
-v1_0	// Current version.
 ├── Code	// Source code here spans from hardware drivers to simple intelligence modules.
 ├── DevFrame	// A framework defining and guiding the development of robotic hardware and software.
 ├── MechanicalStructure	// This folder contains simple SolidWorks 3D models of all robotic components.
